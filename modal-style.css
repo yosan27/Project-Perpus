@@ -1,0 +1,16 @@
+body {
+    margin: 16px;
+}
+
+.btn {
+    width: 100px;
+}
+
+.btn-warning {
+    color: white;
+}
+
+.fa-check-circle {
+    font-size: 64px;
+    color: green;
+}
