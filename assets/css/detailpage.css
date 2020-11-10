@@ -61,3 +61,18 @@ button.arrowbackbutton {
 button.arrowbackbutton:hover {
   font-size: 2.5rem;
 }
+
+/* modal */
+
+.btn {
+  width: 100px;
+}
+
+.btn-warning {
+  color: white;
+}
+
+.fa-check-circle {
+  font-size: 64px;
+  color: green;
+}
