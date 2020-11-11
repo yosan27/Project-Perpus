@@ -50,6 +50,11 @@ div.arrowback {
   left: 5vh;
 }
 
+div.arrowback a{
+  color: black;
+}
+
+
 button.arrowbackbutton {
   border: none;
   background-color: transparent;
