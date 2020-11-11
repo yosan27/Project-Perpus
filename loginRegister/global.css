@@ -14,6 +14,10 @@ body {
   box-shadow: 12px 12px 22px grey;
 }
 
+.box{
+  box-shadow: 2px 2px 8px grey;
+}
+
 img {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
@@ -63,6 +67,12 @@ img {
   width: 38%;
 }
 
+.txt-4 {
+  font-size: 1rem;
+  line-height: 22.13px;
+  width: 40%;
+}
+
 .txt-3 {
   text-shadow: 2px 2px black;
   color: white;
@@ -75,13 +85,27 @@ img {
 
 .img-right {
   float: right;
+  width: 100px;
+  height: 100px;
 }
+
+.grey{
+  color: grey;
+}
+
+.mb-0{
+  margin-bottom: 0px;
+}
+
 
 @media only screen and (max-width: 600px) {
   .img-right {
     float: left;
   }
   .txt-2 {
+    width: 100%;
+  }
+  .txt-4 {
     width: 100%;
   }
 }
