@@ -215,7 +215,7 @@
       <div class="right_col" role="main">
         <!-- title-->
         <div class="container history">
-          <h3 class="text-center">Riwayat Peminjaman Buku</h3>
+          <h3>Borrowed and Returned</h3>
         </div>
         <!-- /title -->
 
@@ -225,12 +225,14 @@
             <table id="history" class="table table-striped table-bordered">
               <thead class="thead-dark">
                 <tr>
-                  <th>Kode Buku</th>
-                  <th>Judul Buku</th>
-                  <th>Nama Peminjam</th>
-                  <th>Tanggal Pinjam</th>
-                  <th>Tanggal Kembali</th>
+                  <th>Book ID</th>
+                  <th>Book Title</th>
+                  <th>Borrower Name</th>
+                  <th>Date Borrowed</th>
+                  <th>Due Date</th>
+                  <th>Date Returned</th>
                   <th>Status</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -239,8 +241,11 @@
                   <td>Unbranding</td>
                   <td>John Elder</td>
                   <td>05/10/2020</td>
+                  <td>18/10/2020</td>
                   <td>12/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
+
                 </tr>
                 <tr>
                   <td>2017103078</td>
@@ -248,23 +253,29 @@
                   <td>John Elder</td>
                   <td>08/10/2020</td>
                   <td>21/10/2020</td>
+                  <td>21/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2017052230</td>
                   <td>Book of Invisible Question</td>
                   <td>Mary Soccer</td>
                   <td>10/11/2020</td>
+                  <td>23/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2019030737</td>
                   <td>The Book You Wish Your Parents Had Read</td>
                   <td>Mary Soccer</td>
                   <td>09/11/2020</td>
+                  <td>22/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2016083125</td>
@@ -272,39 +283,49 @@
                   <td>Mary Soccer</td>
                   <td>07/10/2020</td>
                   <td>20/10/2020</td>
+                  <td>20/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018103185</td>
                   <td>Nanti Kita Cerita Tentang Hari Ini</td>
                   <td>June Watanabe</td>
                   <td>12/10/2020</td>
+                  <td>25/10/2020</td>
                   <td>23/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2014042262</td>
                   <td>Dilan 1990</td>
                   <td>June Watanabe</td>
                   <td>04/11/2020</td>
+                  <td>17/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2016013019</td>
                   <td>Hujan</td>
                   <td>July August</td>
                   <td>23/10/2020</td>
+                  <td>05/11/2020</td>
                   <td></td>
                   <td class="table-danger">Terlambat</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2012120485</td>
                   <td>Pulang</td>
                   <td>July August</td>
                   <td>22/10/2020</td>
+                  <td>04/11/2020</td>
                   <td>02/11/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2015011706</td>
@@ -312,23 +333,29 @@
                   <td>Fiona Green</td>
                   <td>06/10/2020</td>
                   <td>19/10/2020</td>
+                  <td>19/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2019030737</td>
                   <td>The Book You Wish Your Parents Had Read</td>
                   <td>Fiona Green</td>
                   <td>28/10/2020</td>
+                  <td>10/11/2020</td>
                   <td></td>
                   <td class="table-danger">Terlambat</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018112672</td>
                   <td>Filosofi Teras</td>
                   <td>Fiona Green</td>
                   <td>05/11/2020</td>
+                  <td>18/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018112672</td>
@@ -336,150 +363,209 @@
                   <td>Jane Gaines</td>
                   <td>06/10/2020</td>
                   <td>19/10/2020</td>
+                  <td>19/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2015102947</td>
                   <td>Dilan 1991</td>
                   <td>Jane Gaines</td>
                   <td>14/10/2020</td>
+                  <td>27/10/2020</td>
                   <td>23/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2017103078</td>
                   <td>Laut Bercerita</td>
                   <td>Jane Gaines</td>
                   <td>16/10/2020</td>
+                  <td>29/10/2020</td>
                   <td>28/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018061855</td>
                   <td>You Are A Mogul</td>
                   <td>Jane Gaines</td>
                   <td>11/11/2020</td>
+                  <td>24/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2010010102</td>
                   <td>Marmut Merah Jambu</td>
                   <td>Timoteo Hatfield</td>
                   <td>09/10/2020</td>
+                  <td>22/10/2020</td>
                   <td>19/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018061855</td>
                   <td>You Are A Mogul</td>
                   <td>Timoteo Hatfield</td>
                   <td>15/10/2020</td>
+                  <td>28/10/2020</td>
                   <td>23/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2012011320</td>
                   <td>The Things You Can See Only When You Slow Down</td>
                   <td>Cheria Vasti</td>
                   <td>05/10/2020</td>
+                  <td>18/10/2020</td>
                   <td>15/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2014011622</td>
                   <td>Bumi</td>
                   <td>Theodore Eleos</td>
                   <td>20/10/2020</td>
+                  <td>02/11/2020</td>
                   <td>30/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018061855</td>
                   <td>You Are A Mogul</td>
                   <td>Angelica Smith</td>
                   <td>06/11/2020</td>
+                  <td>19/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2012011320</td>
                   <td>The Things You Can See Only When You Slow Down</td>
                   <td>Angelica Smith</td>
                   <td>06/11/2020</td>
+                  <td>19/11/2020</td>
                   <td></td>
                   <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2017100251</td>
                   <td>Unbranding</td>
                   <td>Angelica Smith</td>
                   <td>13/10/2020</td>
+                  <td>26/10/2020</td>
                   <td>20/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2017103078</td>
                   <td>Laut Bercerita</td>
                   <td>Martha Stewart</td>
-                  <td>12/11/2020</td>
-                  <td></td>
+                  <td>12/10/2020</td>
+                  <td>25/10/2020</td>
+                  <td>22/10/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2012120485</td>
                   <td>Pulang</td>
                   <td>Martha Stewart</td>
-                  <td>12/11/2020</td>
-                  <td></td>
-                  <td class="table-warning">Dipinjam</td>
+                  <td>12/10/2020</td>
+                  <td>25/10/2020</td>
+                  <td>22/10/2020</td>
+                  <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018111379</td>
                   <td>Becoming</td>
                   <td>Martha Stewart</td>
                   <td>28/10/2020</td>
+                  <td>10/11/2020</td>
                   <td></td>
                   <td class="table-danger">Terlambat</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2017052230</td>
                   <td>Book of Invisible Question</td>
                   <td>Martha Stewart</td>
                   <td>28/10/2020</td>
+                  <td>10/11/2020</td>
                   <td></td>
                   <td class="table-danger">Terlambat</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018050761</td>
                   <td>Imperfect</td>
                   <td>Joan William</td>
-                  <td>28/10/2020</td>
+                  <td>27/10/2020</td>
+                  <td>09/11/2020</td>
                   <td>05/11/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2020033144</td>
                   <td>A Cup Of Tea</td>
                   <td>Joan William</td>
-                  <td>28/10/2020</td>
+                  <td>29/10/2020</td>
+                  <td>11/11/2020</td>
                   <td>05/11/2020</td>
                   <td class="table-success">Selesai</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit" disabled>Edit</button></td>
                 </tr>
                 <tr>
                   <td>2018101653</td>
                   <td>Atomic Habits</td>
                   <td>Joan William</td>
                   <td>11/11/2020</td>
+                  <td>24/11/2020</td>
                   <td></td>
-                  <td class="table-success">Dipinjam</td>
+                  <td class="table-warning">Dipinjam</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target="#edit">Edit</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-        <!-- /tabel histori -->
-        <!-- /page content -->
+        <!-- /history table -->
+
+        <!-- modal edit -->
+        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editLabel">Book Return Form</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Has this book been returned?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /modal edit-->
+        
+      <!-- /page content -->
 
         <!-- footer content -->
         <footer>
@@ -491,48 +577,46 @@
         </footer>
         <!-- /footer content -->
       </div>
-    </div>
 
-    <!-- Modal add -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
+      <!-- Modal add -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="editModalLabel">Add Book</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-              <div class="modal-body">
-                  <form>
-                      <div class="form-group row">
-                          <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
-                          </div>
-                      </div>
-                      <div class="form-group row">
-                          <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
-                          <div class="col-sm-10">
-                              <input type="text" class="form-control" id="editTitle" placeholder="Title...">
-                          </div>
-                      </div>
-                      <div class="form-group row">
-                          <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
-                          <div class="col-sm-10">
-                              <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
-              </div>
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Add Book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="editTitle" placeholder="Title...">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+            </div>
           </div>
+        </div>
       </div>
-  </div>
-  </div>
-</div>
+    </div>
 
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
