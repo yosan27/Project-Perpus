@@ -5,7 +5,11 @@ body {
 }
 
 .nav_title a span{
-  font-size: 20px;
+  font-size: 17px;
+}
+
+.nav_title a img{
+  width: 40px;
 }
 
 .history h3{
