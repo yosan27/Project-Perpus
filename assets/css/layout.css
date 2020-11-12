@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
 body {
   max-height: 500px;
 }
@@ -15,11 +13,6 @@ body {
 .modal{
   z-index: 9999;
 }
-
-footer {
-  margin-top: 50px;
-}
-
 
 @media only screen and (max-width: 425px) {
   .history h1{

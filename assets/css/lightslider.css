@@ -1,11 +1,6 @@
 /* https://github.com/sachinchoolur/lightslider
 Copyright (c) 2015 Sachin N; Licensed MIT */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
-*{
-    font-family: "Poppins", sans-serif;
-}
 .lSSlideOuter {
     overflow-x: hidden;
     -webkit-touch-callout: none;

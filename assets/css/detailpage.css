@@ -1,10 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
-*{
-  font-family: "Poppins", sans-serif ;
-}
-
-
 div.jumbotron.jumbotron-fluid.detail {
   /* background-image: url("https://res.cloudinary.com/todidewantoro/image/upload/v1604943658/bootcamp/covernya_ejy4v1.jpg"); */
   object-fit: cover;
