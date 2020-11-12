@@ -36,7 +36,10 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Faraday E-Library</span></a>
+            <a href="index.html" class="site_title">
+              <img src="assets/images/1.png" alt="">
+              <span>Faraday E-Library</span>
+            </a>
           </div>
 
           <div class="clearfix"></div>
@@ -62,6 +65,7 @@
               <ul class="nav side-menu">
                 <li><a href="index.html"><i class="fa fa-book"></i> Explore</a> </li>
                 <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
+                <li><a data-toggle="modal" data-target="#editModal"><i class="fa fa-plus"></i> Add Book</a> </li>
               </ul>
             </div>
           </div>
@@ -520,6 +524,45 @@
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
+
+        <!-- Modal add -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Add Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group row">
+                    <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editTitle" placeholder="Title...">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
+                    <div class="col-sm-10">
+                      <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
