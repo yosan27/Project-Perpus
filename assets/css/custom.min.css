@@ -2767,14 +2767,14 @@ ul.msg_list li a .message {
 	margin-top: 0;
 	border: 1px solid #D9DEE4;
 	-webkit-box-shadow: none;
-	right: 0;
-	left: auto;
-	width: 220px
+	/* right: 0; */
+	/* left: auto; */
+	width: 180px
 }
 
-.navbar-nav .open .dropdown-menu.msg_list {
+/* .navbar-nav .open .dropdown-menu.msg_list {
 	width: 300px !important
-}
+} */
 
 ul.to_do {
 	padding: 0
