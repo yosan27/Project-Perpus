@@ -1,6 +1,7 @@
 const email = document.querySelector('.container form .form-row .email');
 const password = document.querySelector('.container form .form-row .password');
 const login = document.querySelector('.container form .form-row .loginBtn');
+const forgot = document.querySelector('.container form .form-row .forgot');
 
 login.addEventListener('click', function () {
   if (email.value == 'admin') {
@@ -20,6 +21,12 @@ login.addEventListener('click', function () {
     alert('Email Tidak Terdaftar!')
   }
 
+  email.value = "";
+  password.value = "";
+});
+
+forgot.addEventListener('click', function(){
+  alert('Password baru dikirimkan ke email :   ' + email.value + "@gmail.com");
   email.value = "";
   password.value = "";
 });
