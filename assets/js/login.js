@@ -2,21 +2,21 @@ const email = document.querySelector('.container form .form-row .email');
 const password = document.querySelector('.container form .form-row .password');
 const login = document.querySelector('.container form .form-row .loginBtn');
 
-login.addEventListener('click', function(){
-  if(email.value == 'admin'){
-    if(password.value == '12345'){
+login.addEventListener('click', function () {
+  if (email.value == 'admin') {
+    if (password.value == '12345') {
       open("index.html", "_self");
-    }else{
+    } else {
       alert('Password Salah!')
     }
   }
-  else if(email.value == 'user'){
-    if(password.value == '12345'){
+  else if (email.value == 'user') {
+    if (password.value == '12345') {
       open("indexUser.html", "_self");
-    }else{
+    } else {
       alert('Password Salah!')
     }
-  }else{
+  } else {
     alert('Email Tidak Terdaftar!')
   }
 
