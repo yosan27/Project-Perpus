@@ -21,6 +21,10 @@ body {
 }
 
 @media only screen and (max-width: 425px) {
+  footer div{
+    font-size: 11px;
+  }
+
   .history h1{
     font-size: 32px;
   }
