@@ -39,7 +39,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title">
+            <a href="indexUser.html" class="site_title">
               <img src="assets/images/1.png" alt="">
               <span>Faraday E-Library</span>
             </a>
@@ -54,11 +54,11 @@
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
-              <h2>Admin</h2>
+              <h2>User</h2>
             </div>
           </div>
           <div class="profile_name">
-            <h4>Admin</h4>
+            <h4>User</h4>
           </div>
           <!-- /menu profile quick info -->
 
@@ -69,9 +69,18 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a href="index.html"><i class="fa fa-book"></i> Explore</a> </li>
-                <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
+                <li><a href="indexUser.html"><i class="fa fa-book"></i> Explore</a> </li>
+                <li><a href="historyUser.html"><i class="fa fa-history"></i> History</a></li>
                 <li><a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a></li>
+                <li>
+                  <a>
+                    <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
+                  </a>
+                  <ul class="nav child_menu">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -243,7 +252,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                             <tbody>
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Selena</td>
@@ -416,6 +425,7 @@
                 <div class="modal-footer">
                   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalReview">Review</button>
                   <a href="detailpage.html"><button type="button" class="btn btn-warning">Borrow</button></a>
+
                 </div>
               </div>
             </div>
@@ -608,6 +618,8 @@
     <script type="text/javascript" charset="utf8"
       src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <script src="assets/js/datatable.js"></script>
+
+    
 </body>
 
 </html>
