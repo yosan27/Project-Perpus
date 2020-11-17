@@ -22,7 +22,7 @@
   <link href="assets/css/custom.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/carousel.css">
   <link rel="stylesheet" href="assets/css/lightslider.css">
-
+  <link rel="stylesheet" href="assets/css/cart.css">
   <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 
@@ -62,8 +62,18 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a href=""><i class="fa fa-book"></i> Explore</a> </li>
+                <li><a href="indexUser.html"><i class="fa fa-book"></i> Explore</a> </li>
                 <li><a href="historyUser.html"><i class="fa fa-history"></i> History</a></li>
+                <li><a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a></li>
+                <li>
+                  <a>
+                    <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
+                  </a>
+                  <ul class="nav child_menu">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -129,69 +139,11 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
-            <li role="presentation" class="nav-item dropdown open" style="padding-left: 15px; padding-top:8px;">
-              <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown"
-                aria-expanded="false" style="color:#495464 !important;">
-                <i class="fa fa-bell fa-lg"></i>
+            <li class="nav-item" style="padding-left: 15px;">
+              <a href="cart.html" class="nav-link" style="color:#495464 !important;">
+                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
+                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
               </a>
-              <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>User</span>
-
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <div class="text-center">
-                    <a class="dropdown-item">
-                      <strong>See All Alerts</strong>
-                      <i class="fa fa-angle-right"></i>
-                    </a>
-                  </div>
-                </li>
-              </ul>
             </li>
             <li class="nav-item" style="padding-left: 15px;">
               <form class="form-inline pt-2">
@@ -316,7 +268,7 @@
 
           <ul id="autoWidth2" class="cs-hidden ulBest">
             <li class="item-a">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/acup.jpg">
@@ -331,7 +283,7 @@
             </li>
 
             <li class="item-b">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/journal.jpg">
@@ -346,7 +298,7 @@
             </li>
 
             <li class="item-c">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/assc.jpg">
@@ -361,7 +313,7 @@
             </li>
 
             <li class="item-d">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/almond.jpg">
@@ -376,7 +328,7 @@
             </li>
 
             <li class="item-e">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/selena.jpg">
@@ -391,7 +343,7 @@
             </li>
 
             <li class="item-f">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/laut.jpg">
@@ -406,7 +358,7 @@
             </li>
 
             <li class="item-g">
-              <a href="detailpageUser.html">
+              <a href="detailpage.html">
                 <div class="latest-box">
                   <div class="latest-b-img">
                     <img src="assets/images/ibuk.jpg">
