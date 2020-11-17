@@ -28,11 +28,11 @@
     </div>
   </div>
 
-  <div class='buttongroupedit'>
+  <!-- <div class='buttongroupedit'>
     <button type="button" data-toggle="modal" data-target="#editModal" class="btn btn-light edit">Edit</button>
     <button type="button" data-toggle="modal" data-target="#deleteModal" data-whatever="@getbootstrap"
       class="btn btn-light delete">Delete</button>
-  </div>
+  </div> -->
 
   <div class='arrowback'>
     <button id='arrowbackbutton' type='button' class='arrowbackbutton'>
@@ -91,44 +91,21 @@
         </div>
         <div class="modal-body">
           <form>
-            <div class="form-group row justify-content-around">
+            <div class="form-group row justify-content-start">
               <label for="editImage" class="col-sm-2 col-form-label">Tanggal peminjaman</label>
               <div class="col-lg-4">
-                <input type="date" id="tanggalpeminjaman" name="form-control">
-              </div>
-              <label for="editTitle" class="col-sm-2 col-form-label">Tanggal pengembalian</label>
-              <div class="col-lg-4">
-                <input type="date" id="tanggalpengembalian" name="form-control">
+                <input type="text" id="datepicker" class="form-control" placeholder="Masukan tanggal" value=''>
               </div>
             </div>
 
             <div class="form-group row">
-              <label for="editDesc" class="col-sm-2 col-form-label">Pilih metode pembayaran</label>
-              <div class="btn-group col-lg-4">
-                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                  Transfer antar bank
-                </button>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Pembayaran A</a>
-                  <a class="dropdown-item" href="#">Pembayaran B</a>
-                  <a class="dropdown-item" href="#">Pembayaran C</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">FaradayPay</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
-              <div class="col-sm-8">
-                <textarea class="form-control" id="borrowDesc" placeholder="Description..."></textarea>
-              </div>
+              <label for="editDesc" class="ml-3 col-form-label">Batas pengembalian buku :</label>
+              <span id='bataspengembalian' class='d-flex align-items-center ml-4'></span>
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+          <button type="submit" class="btn btn-warning" data-dismiss="modal">Save</button>
         </div>
       </div>
     </div>
