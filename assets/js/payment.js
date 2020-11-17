@@ -58,18 +58,19 @@ inputNominal.addEventListener('input', function(){
 });
 
 topUpBtn.addEventListener('click', function(){
+  mbankBox.classList.add('hide');
+  atmBox.classList.add('hide');
+  historyPayment.classList.add('hide');
+  noBill.classList.add('hide');
+
   if(topUpBtn.innerHTML == "Top Up"){
-    noBill.classList.add('hide');
     topUpBtn.innerHTML = "Payment"
     listBox.classList.add('hide');
     topUpBox.classList.toggle('hide');
-    historyPayment.classList.add('hide');
   }else{
     topUpBtn.innerHTML = "Top Up"
     listBox.classList.remove('hide');
     topUpBox.classList.add('hide');
-    historyPayment.classList.add('hide');
-    noBill.classList.add('hide');
   }
 });
 
@@ -133,6 +134,8 @@ historyBtn.addEventListener('click', function(){
   listBox.classList.add('hide');
   topUpBox.classList.add('hide');
   historyPayment.classList.toggle('hide');
+  mbankBox.classList.add('hide');
+  atmBox.classList.add('hide');
 
   if(historyPayment.classList.contains('hide')){
     noBill.classList.remove('hide');
