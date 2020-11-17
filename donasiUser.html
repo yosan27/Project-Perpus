@@ -7,8 +7,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <link rel="icon" href="assets/images/1.png" type="image/ico" />
+
+
     <title>Faraday E-Library | Sistem Peminjaman Buku</title>
 
     <!-- Bootstrap -->
@@ -23,10 +24,10 @@
     <link rel="stylesheet" href="assets/css/carousel.css">
     <link rel="stylesheet" href="assets/css/lightslider.css">
 
-    <link rel="stylesheet" href="assets/css/cart.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
     <!-- Data Tables -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 
 <body class="nav-md">
@@ -69,13 +70,13 @@
                                 <li><a href="historyUser.html"><i class="fa fa-history"></i> History</a></li>
                                 <li><a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a></li>
                                 <li>
-                                    <a>
-                                        <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
-                                    </a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="cart.html">Cart</a></li>
-                                        <li><a href="wishlist.html">Wishlist</a></li>
-                                    </ul>
+                                <a>
+                                    <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
+                                </a>
+                                <ul class="nav child_menu">
+                                    <li><a href="cart.html">Cart</a></li>
+                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                </ul>
                                 </li>
                                 <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
                                 <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donasi</a></li>
@@ -90,8 +91,8 @@
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
                         </a>
                         <!-- <a data-toggle="tooltip" data-placement="top" title="Settings">
-                            <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                        </a> -->
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a> -->
                     </div>
                     <!-- /menu footer buttons -->
                 </div>
@@ -145,11 +146,79 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item" style="padding-left: 15px;">
-                            <a href="cart.html" class="nav-link" style="color:#495464 !important;">
-                                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
-                                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
+                        <li role="presentation" class="nav-item dropdown open"
+                            style="padding-left: 15px; padding-top:8px;">
+                            <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
+                                data-toggle="dropdown" aria-expanded="false" style="color:#495464 !important;">
+                                <i class="fa fa-bell fa-lg"></i>
                             </a>
+                            <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                                aria-labelledby="navbarDropdown1">
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="image"><img src="assets/images/user.png"
+                                                alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were
+                                            where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="image"><img src="assets/images/user.png"
+                                                alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were
+                                            where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="image"><img src="assets/images/user.png"
+                                                alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were
+                                            where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="image"><img src="assets/images/user.png"
+                                                alt="Profile Image" /></span>
+                                        <span>
+                                            <span>John Smith</span>
+
+                                        </span>
+                                        <span class="message">
+                                            Film festivals used to be do-or-die moments for movie makers. They were
+                                            where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="text-center">
+                                        <a class="dropdown-item">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item" style="padding-left: 15px;">
                             <form class="form-inline pt-2">
@@ -173,97 +242,49 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-                <section class="content mt-5 pt-5 pb-5">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-12 col-lg-12">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h3 class="card-title">Wishlist</h3>
-                                    </div>
-                                    <div class="card-body pb-5">
-                                        <h5 class="text-center">Book List</h5>
-                                        <div class="table-responsive">
-                                            <table id="wishlist_table" class="table table-white" style="width:100%">
-                                                <thead>
-                                                    <tr>
-                                                        <th>ID Book</th>
-                                                        <th>Cover</th>
-                                                        <th>Title</th>
-                                                        <th>Author</th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr id="data1">
-                                                        <td>10100733</td>
-                                                        <td class="text-center">
-                                                            <img height="100" src="assets/images/acup.jpg">
-                                                        </td>
-                                                        <td>A Cup Of Tea</td>
-                                                        <td>Gita Savitri Devi</td>
-                                                        <td>
-                                                            <span class="badge badge-danger">
-                                                                Tidak Dapat Dipinjam
-                                                            </span>
-                                                        </td>
-                                                        <td>
-                                                            <a href="detailpageUser.html"
-                                                                class="btn shadow btn-sm btn-light"><i
-                                                                    class="fa fa-info"></i></a>
-                                                            <a id="btn-data1" href="#"
-                                                                class="btn shadow btn-sm btn-danger"><i
-                                                                    class="fa fa-trash"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr id="data2">
-                                                        <td>10100785</td>
-                                                        <td class="text-center">
-                                                            <img height="100" src="assets/images/journal.jpg">
-                                                        </td>
-                                                        <td>Koloni Journal of Terror</td>
-                                                        <td>Sweta Kartika</td>
-                                                        <td>
-                                                            <span class="badge badge-success">
-                                                                Dapat Dipinjam
-                                                            </span>
-                                                        </td>
-                                                        <td>
-                                                            <a href="detailpageUser.html"
-                                                                class="btn shadow btn-sm btn-light"><i
-                                                                    class="fa fa-info"></i></a>
-                                                            <a id="btn-data2" href="#" class="btn btn-sm btn-danger"><i
-                                                                    class="fa fa-trash"></i></a>
-                                                            <a id="btn-pinjam2" href="#"
-                                                                class="btn shadow btn-sm btn-success">
-                                                                Borrow
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <!-- title-->
+                <div class="container history">
+                    <h3 class="">Donation</h3>
+                </div>
+                <!-- /title -->
+
+                <!-- content table -->
+                <div class="container" id="demo">
+                    <div class="row justify-content-md-center">
+                        <img src="assets/images/donation1.png" class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <h4 class="col-lg-8 text-center"><i>"Indonesia menempati peringkat 60 dari 61 negara dengan
+                                level literasi baca" </i> <b> Unesco(2019)</b> </h4>
+                    </div>
+                    <br /><br />
+                    <div class="row justify-content-md-center">
+                        <div class="col-lg-2">
+                            <button type="button" class="btn btn-info" onclick="loadDoc()">Kenali lebih dalam</button>
+                        </div>
+                        <div class="col-lg-2">
+                            <a href="formdonasiUser.html"><button type="button" class="btn btn-outline-info">Donasi
+                                    Sekarang!</button></a>
                         </div>
                     </div>
-                </section>
+
+                </div>
+                <!-- /tabel histori -->
             </div>
             <!-- /page content -->
 
-            <!-- footer content -->
-            <footer>
-                <div class="pull-right">
-                    2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right Reserved - Template by <a
-                        href="https://colorlib.com">Colorlib</a>
-                </div>
-                <div class="clearfix"></div>
-            </footer>
-            <!-- /footer content -->
         </div>
+        <!-- /page content -->
 
+        <!-- footer content -->
+        <footer>
+            <div class="pull-right">
+                2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right Reserved - Template by <a
+                    href="https://colorlib.com">Colorlib</a>
+            </div>
+            <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
     </div>
 
     <!-- jQuery -->
@@ -281,14 +302,31 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/slider2.js"></script>
 
-    <!-- click -->
-    <script src="assets/js/detailClick.js"></script>
-    <!-- cart -->
-    <script src="assets/js/cart.js"></script>
+    <!-- Data Tables -->
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js">
     </script>
-    <!-- wishlist -->
-    <script src="assets/js/wishlist.js"></script>
+    <script src="assets/js/datatable.js"></script>
+
+
+    <script>
+        function loadDoc() {
+            var xhttp;
+            if (window.XMLHttpRequest) {
+                // code for modern browsers
+                xhttp = new XMLHttpRequest();
+            } else {
+                // code for IE6, IE5
+                xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "ajax-info.txt", true);
+            xhttp.send();
+        }
+    </script>
 </body>
 
 </html>

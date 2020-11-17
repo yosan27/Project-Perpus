@@ -6,7 +6,7 @@ slider.addEventListener('mouseenter', function(){
       if(user.innerHTML == 'Admin'){
         open("detailpage.html", "_self");
       }else{
-        open("detailpageUIser.html", "_self");
+        open("detailpageUser.html", "_self");
       }
   });
 });
