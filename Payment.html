@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="assets/images/1.png" type="image/ico" />
+
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/payment.css">
+
+    <title>Faraday E-Library | Payment</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header-payment pt-2 pl-4">
+      <div class="row">
+        <div class="col">
+          <a href=""><i class="fa fa-arrow-circle-left"></i></a>
+        </div>
+
+        <div class="col d-flex justify-content-end">
+          <i class="fa fa-credit-card pt-1 pr-2"></i>
+          <i class="fa fa-cc-paypal pt-1 pr-2"></i>
+          <i class="fa fa-cc-visa pt-1 pr-2"></i>
+          <i class="fa fa-cc-mastercard pt-1 pr-5"></i>
+        </div>
+      </div>
+    </div>
+    <!-- Header -->
+
+    <!-- Logo Bar -->
+    <div class="header-logo-bar shadow-sm p-3 mb-4 bg-white">
+      <div class="row">
+        <div class="logo col d-flex justify-content-start pr-5">
+          <ul>
+            <li><img src="assets/images/1.png" alt=""></li>
+            <li><h4>Farday E-Library | Payment</h4></li>
+          </ul>
+        </div>
+
+        <div class="top-up col d-flex justify-content-end pr-5">
+          <p class="pr-1">Rp</p>
+          <span class="pr-3 saldo"></span>
+          <i class="fa fa-history pr-3" id="history-btn"></i>
+          <button class="btn btn-success" id="topUP" type="submit">Top Up</button>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Logo Bar -->
+
+    <!-- List -->
+    <div class="list-box container border-0 shadow-sm mb-4 bg-white">
+      
+      <div class="row list-header pl-4 pb-2 pt-2 border-bottom">
+        <div class="col">
+          No.
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Jenis Denda
+        </div>
+
+        <div class="col d-flex justify-content-end pr-4">
+          Jumlah Denda
+        </div>
+      </div>
+
+      <div class="row list-1 pl-5 pb-3 pt-3 border-bottom">
+        <div class="col">
+          1. Order ID
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Telat
+        </div>
+
+        <div class="denda col d-flex justify-content-end pr-5">
+        </div>
+      </div>
+      
+      <div class="row list-2 pl-5 pb-3 pt-3 border-bottom lightgray">
+        <div class="col">
+          2. Order ID
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Telat
+        </div>
+
+        <div class="denda col d-flex justify-content-end pr-5">
+        </div>
+      </div>
+
+      <div class="row list-3 pl-5 pb-3 pt-3 border-bottom">
+        <div class="col">
+          3. Order ID
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Telat
+        </div>
+
+        <div class="denda col d-flex justify-content-end pr-5">
+        </div>
+      </div>
+
+      <div class="row list-4 pl-5 pb-3 pt-3 border-bottom lightgray">
+        <div class="col">
+          4. Order ID
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Telat
+        </div>
+
+        <div class="denda col d-flex justify-content-end pr-5">
+        </div>
+      </div>
+
+      <div class="row list-5 pl-5 pb-3 pt-3 border-bottom">
+        <div class="col">
+          5. Order ID
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Telat
+        </div>
+
+        <div class="denda col d-flex justify-content-end pr-5">
+        </div>
+      </div>
+
+      <div class="row list-6 pl-5 pb-3 pt-3 border-bottom lightgray">
+        <div class="col">
+          6. Order ID
+        </div>
+
+        <div class="col d-flex justify-content-center">
+          Telat
+        </div>
+
+        <div class="denda col d-flex justify-content-end pr-5">
+        </div>
+      </div>
+
+      <div class="row list-total pl-5 pb-2 pt-2">
+        <div class="col">
+          <button class="btn btn-success" id="pay" type="button" data-toggle="modal" data-target="#payModal">Pay</button>
+        </div>
+
+        <div class="col">
+          Total 
+        </div>
+
+        <div class="total col d-flex justify-content-end pr-5">
+        </div>
+        
+      </div>
+    </div>
+    <!-- List -->
+
+    <!-- No Bill -->
+    <div class="container d-flex justify-content-center">
+      <div class="hide p-5" id="no-bill">
+        <span>Tidak Ada Tagihan</span>
+      </div>
+    </div>
+    <!-- No Bill -->
+
+    <!-- History Payment -->
+    <div class="history-payment container shadow-sm mb-4 p-3 bg-white hide">
+      <div class="row p-3">
+        <div class="col">
+          <b class="history-payment-title">History Payment</b>
+        </div>
+      </div>
+
+      <!-- Payment List-->
+      <div class="row">
+        <div class="col">
+          <div class="row payment-date m-3 pb-1 pt-1">
+            <div class="col">
+              17 Nov 2020
+            </div>
+          </div>
+    
+          <div class="row pl-4">
+            <div class="col">
+              <b>No. Referensi :</b><span> 000</span>
+            </div>
+          </div>
+    
+          <div class="row pl-4 pt-2 detail-payment-min">
+            <div class="col">
+              <span>Pembayaran</span>
+            </div>
+    
+            <div class="col d-flex justify-content-end pr-5">
+              <span>-Rp<span>20.000</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="row payment-date m-3 pb-1 pt-1">
+            <div class="col">
+              16 Nov 2020
+            </div>
+          </div>
+    
+          <div class="row pl-4">
+            <div class="col">
+              <b>No. Referensi :</b><span> 000</span>
+            </div>
+          </div>
+    
+          <div class="row pl-4 pt-2 detail-payment-plus">
+            <div class="col">
+              <span>Top Up</span>
+            </div>
+    
+            <div class="col d-flex justify-content-end pr-5">
+              <span>+Rp<span>120.000</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Payment List-->
+    </div>
+    <!-- History Payment -->
+
+    <!-- Top Up Box -->
+    <div class="top-up-box hide">
+      <div class="container border-0 shadow-sm mb-4 bg-white p-3">
+        <div class="row pl-3 pt-3">
+          <div class="col">
+            <b>Pilih Nominal Top Up</b>
+          </div>
+        </div>
+  
+        <div class="row p-3">
+          <div class="col">
+            <button type="button" class="btn btn-outline-secondary mt-2">10000</button>
+            <button type="button" class="btn btn-outline-secondary mt-2">25000</button>
+            <button type="button" class="btn btn-outline-secondary mt-2">50000</button>
+            <button type="button" class="btn btn-outline-secondary mt-2">75000</button>
+            <button type="button" class="btn btn-outline-secondary mt-2">100000</button>
+          </div>
+        </div>
+  
+        <div class="row p-3">
+          <div class="col">
+            <p>Atau masukkan nominal top up di sini</p>
+            <input class="pl-3 pt-2 pb-2" id ="input-saldo" type="text" placeholder="Minimal Rp 10.000">
+          </div>
+        </div>
+  
+        <div class="row pl-3">
+          <div class="col">
+            <p class="min-nominal hide">Minimal Top Up Rp. 10.000</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Payment Method -->
+      <div class="container border-0 shadow-sm mb-4 bg-white p-3">
+        <div class="row p-3">
+          <div class="col">
+            <b>Metode Pembayaran</b>
+          </div>
+        </div>
+  
+        <div class="row p-3">
+          <div class="col d-flex">
+            <button class="methodPay btn mr-1 btn-warning" id="debit" type="button" data-toggle="modal" data-target="#debitModal">Kartu Debit</button>
+
+            <button class="methodPay btn mr-1 btn-warning" id="atm" type="button">ATM</button>
+
+            <button class="methodPay btn mr-1 btn-warning" id="mbank" type="button">Internet/Mobile Banking</button>
+          </div>
+        </div>
+        <!-- Payment Method -->
+      </div>
+      <!-- Payment Method -->
+    </div>
+    <!-- Top Up Box -->
+
+    <!-- ATM -->
+    <div class="atm-box container shadow-sm mb-4 p-5 bg-white hide">
+      <div class="method-title row mb-4">
+        <div class="col">
+          ATM
+        </div>
+      </div>
+
+      <div class="row pb-2">
+        <div class="col">
+          <b>Instruksi :</b>
+        </div>
+      </div>
+
+      <div class="row mb-4">
+        <div class="col">
+          <ul>
+            <li>Masukkan kartu ATM dan PIN Anda</li>
+            <li>Pilih menu <b>Transaksi Lainnya</b></li>
+            <li>Pilih menu <b>Transfer</b></li>
+            <li>Pilih menu <b>Virtual Account</b></li>
+            <li>Masukkan 12345 + nomor ponsel Anda: <b>12345 08xx-xxxx-xxxx</b></li>
+            <li>Masukkan <b>Nominal Top Up</b></li>
+            <li>Ikuti instruksi untuk menyelesaikan transaksi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row footnote">
+        <div class="col">
+          <span><i>Catatan :</i></span>
+        </div>
+      </div>
+
+      <div class="row footnote">
+        <div class="col">
+          <ul>
+            <li><i>Minimum top-up Rp 20.000</i></li>
+            <li><i>Biaya top-up Rp 1.000</i></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!-- ATM -->
+
+    <!-- Mbank -->
+    <div class="mbank-box container shadow-sm mb-4 p-5 bg-white hide">
+      <div class="method-title row mb-4">
+        <div class="col">
+          Internet / Mobile Banking
+        </div>
+      </div>
+
+      <div class="row mb-5">
+        <div class="col">
+          <div class="row mb-4">
+            <div class="con">
+              <span id="mbank-btn"><i class="fa fa-plus" id="icon1"></i><b class="pl-2">Mobile Banking</b></span>
+              <div class="container mt-4 mbank-collapse hide">
+                <div class="row pb-2">
+                  <div class="col">
+                    <b>Instruksi :</b>
+                  </div>
+                </div>
+          
+                <div class="row mb-4">
+                  <div class="col">
+                    <ul>
+                      <li>Login ke akun <b>Mobile Banking</b> Anda</li>
+                      <li>Pilih menu <b>Transfer</b></li>
+                      <li>Pilih <b>Virtual Account</b></li>
+                      <li>Masukkan 12345 + nomor ponsel Anda: <b>12345 08xx-xxxx-xxxx</b></li>
+                      <li>Masukkan <b>Nominal Top Up</b></li>
+                      <li>Ikuti instruksi untuk menyelesaikan transaksi</li>
+                    </ul>
+                  </div>
+                </div>
+          
+                <div class="row footnote">
+                  <div class="col">
+                    <span><i>Catatan :</i></span>
+                  </div>
+                </div>
+          
+                <div class="row footnote">
+                  <div class="col">
+                    <ul>
+                      <li><i>Minimum top-up Rp 20.000</i></li>
+                      <li><i>Biaya top-up Rp 1.000</i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="con">
+              <span id="internet-btn"><i class="fa fa-plus" id="icon2"></i><b class="pl-2">Internet Banking</b></span>
+              <div class="container mt-4 internet-collapse hide">
+                <div class="row pb-2">
+                  <div class="col">
+                    <b>Instruksi :</b>
+                  </div>
+                </div>
+          
+                <div class="row mb-4">
+                  <div class="col">
+                    <ul>
+                      <li>Login ke akun <b>Internet Banking</b> Anda</li>
+                      <li>Pilih menu <b>Transfer Dana</b></li>
+                      <li>Pilih <b>Virtual Account</b></li>
+                      <li>Masukkan 12345 + nomor ponsel Anda: <b>12345 08xx-xxxx-xxxx</b></li>
+                      <li>Masukkan <b>Nominal Top Up</b></li>
+                      <li>Ikuti instruksi untuk menyelesaikan transaksi</li>
+                    </ul>
+                  </div>
+                </div>
+          
+                <div class="row footnote">
+                  <div class="col">
+                    <span><i>Catatan :</i></span>
+                  </div>
+                </div>
+          
+                <div class="row footnote">
+                  <div class="col">
+                    <ul>
+                      <li><i>Minimum top-up Rp 20.000</i></li>
+                      <li><i>Biaya top-up Rp 1.000</i></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+    <!-- Mbank -->
+
+    <!-- Pay Modal -->
+    <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="fa fa-check-circle"></i>
+            <p><b>Pembayaran Berhasil!</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pay Modal -->
+
+    <!-- Pay Debit Modal -->
+    <div class="modal fade" id="payDebitModal" tabindex="-1" aria-labelledby="payDebitModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <i class="fa fa-check-circle"></i>
+            <p><b>Pembayaran Berhasil!</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Pay Debit Modal -->
+
+    <!-- Debit Modal -->
+    <div class="modal fade" id="debitModal" tabindex="-1" aria-labelledby="debitModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-debit">
+          <div class="modal-body">
+            <div class="container-fluid">
+
+              <div class="row">
+                <div class="col">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md title">
+                  <b>Kartu Debit</b>
+                  <hr>
+                </div>
+              </div>
+              
+              <div class="row pb-3">
+                <div class="col-md">
+                  <label for="nameCard"><b>Nama pemilik kartu</b></label><br>
+                  <input class="long-input" type="text" name="nameCard" autocomplete="off" size="34">
+                </div>
+              </div>
+
+              <div class="row pb-3">
+                <div class="col-md">
+                  <label for="cardNumber"><b>Nomor kartu</b></label><br>
+                  <input class="long-input" type="text" name="cardNumber" autocomplete="off" size="34">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-4">
+                  <label for="cvc"><b>CVC</b></label>
+                </div>
+
+                <div class="col">
+                  <label for="masa"><b>Masa Berlaku</b></label>
+                </div>
+              </div>
+
+              <div class="row pb-3">
+                <div class="col">
+                  <input class="short-input" type="text" name="cvc" placeholder="cth.311" autocomplete="off" size="3">
+                </div>
+
+                <div class="col">
+                  <input class="short-input" type="text" name="masa" placeholder="Bulan" autocomplete="off" size="5">
+                </div>
+
+                <div class="col d-flex justify-content-start">
+                  <input class="short-input" type="text" name="masa" placeholder="Tahun" autocomplete="off" size="5">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="total col d-flex align-items-center pl-3 pt-3 pb-3">
+                  Total :<span class="pl-3">10000</span>
+                </div>
+
+                <div class="col d-flex align-items-center justify-content-end">
+                  <button class="btn btn-success" type="button" data-toggle="modal" data-target="#payDebitModal" data-dismiss="modal">Pay</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Debit Modal -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script src="assets/js/payment.js"></script>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  </body>
+</html>
