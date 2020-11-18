@@ -117,7 +117,7 @@ body{
 
 .modal .modal-debit .container-fluid .total{
   font-weight: bolder;
-  font-size: large;
+  font-size: 16px;
   color: black;
 }
 
@@ -217,5 +217,11 @@ body{
   .modal .modal-debit .container-fluid .short-input{
     width: 100%;
     font-size: smaller;
+  }
+
+  .modal .modal-debit .container-fluid .total{
+    font-weight: bolder;
+    font-size: 14px;
+    color: black;
   }
 }
