@@ -28,6 +28,12 @@ const icon1 = document.querySelector('#icon1');
 const icon2 = document.querySelector('#icon2');
 const historyPayment = document.querySelector('.history-payment');
 const historyBtn = document.getElementById('history-btn');
+const btn10000 = document.getElementById('10000');
+const btn25000 = document.getElementById('25000');
+const btn50000 = document.getElementById('50000');
+const btn75000 = document.getElementById('75000');
+const btn100000 = document.getElementById('100000');
+const totalDebit = document.getElementById('total-debit');
 
 // saldo
 const saldo = document.querySelector('.header-logo-bar .saldo');
@@ -52,9 +58,37 @@ total.innerHTML = sum;
 inputNominal.addEventListener('input', function(){
   if(parseInt(inputNominal.value) < 10000){
     minimum.classList.remove('hide');
+    totalDebit.innerHTML = '0';
+    
   }else{
     minimum.classList.add('hide');
+    totalDebit.innerHTML = inputNominal.value;
   }
+});
+
+btn10000.addEventListener('click', function(){
+  inputNominal.value = '10000';
+  totalDebit.innerHTML = '10000';
+});
+
+btn25000.addEventListener('click', function(){
+  inputNominal.value = '25000';
+  totalDebit.innerHTML = '25000';
+});
+
+btn50000.addEventListener('click', function(){
+  inputNominal.value = '50000';
+  totalDebit.innerHTML = '50000';
+});
+
+btn75000.addEventListener('click', function(){
+  inputNominal.value = '75000';
+  totalDebit.innerHTML = '75000';
+});
+
+btn100000.addEventListener('click', function(){
+  inputNominal.value = '100000';
+  totalDebit.innerHTML = '100000';
 });
 
 topUpBtn.addEventListener('click', function(){
@@ -100,7 +134,6 @@ mbankBtn.addEventListener('click', function(){
   }else{
     icon1.className = 'fa fa-plus';
   }
-  
 });
 
 internetBtn.addEventListener('click', function(){
