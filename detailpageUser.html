@@ -89,7 +89,7 @@
               <label for="borrowLimit" class="col-sm-4 col-form-label">Batas pengembalian :</label>
               <br>
               <div class="col-lg-6">
-                <input readonly id="bataspengembalian"  class="form-control" required>
+                <input readonly id="bataspengembalian"  class="form-control" required value="">
               </div>
             </div>
             <!-- datepicker peminjaman -->
@@ -97,7 +97,7 @@
         </div>
         <div class="modal-footer">
           <button id='borrowButton' type="submit" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-          <button id='addToCartButton' type="submit" class="btn btn-success" data-toggle="modal" data-target="#cartSuccessModal" data-dismiss="modal"><i class="fa fa-plus"></i> Cart</button>
+          <button disabled id='addToCartButton' type="submit" class="btn btn-success" data-toggle="modal" data-target="#cartSuccessModal"><i class="fa fa-plus"></i> Cart</button>
         </div>
       </div>
     </div>
