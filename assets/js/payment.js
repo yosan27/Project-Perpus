@@ -34,6 +34,7 @@ const btn50000 = document.getElementById('50000');
 const btn75000 = document.getElementById('75000');
 const btn100000 = document.getElementById('100000');
 const totalDebit = document.getElementById('total-debit');
+const debitPayBtn = document.getElementById('debit-pay-btn');
 
 // saldo
 const saldo = document.querySelector('.header-logo-bar .saldo');
@@ -146,6 +147,11 @@ internetBtn.addEventListener('click', function(){
   }else{
     icon2.className = 'fa fa-plus';
   }
+});
+
+debitPayBtn.addEventListener('click', function(){
+  saldo.innerHTML = parseInt(saldo.innerHTML) + parseInt(totalDebit.innerHTML);
+  inputNominal.value = '';
 });
 
 // pay
