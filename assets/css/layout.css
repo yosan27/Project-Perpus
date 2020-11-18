@@ -35,6 +35,10 @@ body {
   text-align: center;
 }
 
+.smaller{
+  font-size: smaller;
+}
+
 @media only screen and (max-width: 768px) {
   .profile_name{
     display: inline;
