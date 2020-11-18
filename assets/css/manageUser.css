@@ -4,10 +4,6 @@ body {
   max-height: 500px;
 }
 
-.nav_title a span{
-  font-size: 60px;
-}
-
 .nav_title a img{
   width: 40px;
 }
