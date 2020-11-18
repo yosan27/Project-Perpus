@@ -14,7 +14,7 @@
 }
 
 .item-inner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coverSlider/2.svg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coverSlider/1.svg');
     height: 250px;
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
     max-width: auto;
@@ -28,7 +28,7 @@
 }
 
 .item3 .item-inner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coverSlider/2.svg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coverSlider/1.svg');
 }
 
 .item4 .item-inner {
@@ -36,7 +36,7 @@
 }
 
 .item5 .item-inner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coverSlider/1.svg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/coverSlider/2.svg');
 }
 
 .item-inner .text-slide {
