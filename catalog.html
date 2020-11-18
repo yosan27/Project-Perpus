@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link rel="stylesheet" href="assets/css/catalog.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
 </head>
 
 <body class="nav-md">
@@ -39,7 +40,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="index.html" class="site_title">
+            <a href="indexUser.html" class="site_title">
               <img src="assets/images/1.png" alt="">
               <span>Faraday E-Library</span>
             </a>
@@ -54,11 +55,11 @@
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
-              <h2>Admin</h2>
+              <h2>User</h2>
             </div>
           </div>
           <div class="profile_name">
-            <h4>Admin</h4>
+            <h4>User</h4>
           </div>
           <!-- /menu profile quick info -->
 
@@ -69,9 +70,20 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a href="index.html"><i class="fa fa-book"></i> Explore</a> </li>
-                <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
+                <li><a href="indexUser.html"><i class="fa fa-book"></i> Explore</a> </li>
+                <li><a href="historyUser.html"><i class="fa fa-history"></i> History</a></li>
                 <li><a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a></li>
+                <li>
+                  <a>
+                    <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
+                  </a>
+                  <ul class="nav child_menu">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                  </ul>
+                </li>
+                <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
+                <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donasi</a></li>
               </ul>
             </div>
           </div>
@@ -225,7 +237,6 @@
         <!-- title-->
         <div class="container history">
           <h3 class="">Book Catalog</h3>
-          <button class="btn btn-secondary" data-toggle="modal" data-target="#ModalAdd"> Add Book</button>
         </div>
         <!-- /title -->
 
@@ -238,17 +249,19 @@
                                     <th>Book ID</th>
                                     <th>Book Title</th>                         
                                     <th>Book Cover</th>
-                                    <th>Writer</th>
+                                    <th>Author</th>
+                                    <th>Categories</th>
                                     <th>Publisher</th>
-                                    <th>Detail</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                             <tbody>
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Selena</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg"></td>
                                     <td>Tere Liye</td>
+                                    <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -257,6 +270,7 @@
                                     <td>Nebula</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/nebula_gramedia.jpg"></td>
                                     <td>Tere Liye</td>
+                                    <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -265,6 +279,7 @@
                                     <td> Misteri Terakhir #1 </td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg"></td>
                                     <td>S. Mara Gd</td>
+                                    <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -273,6 +288,7 @@
                                     <td> After the Funeral (Setelah Pemakaman)</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/after-the-funeral_gramedia.jpg"></td>
                                     <td>Agatha Christie</td>
+                                    <td>Detective and mystery stories</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -281,6 +297,7 @@
                                     <td> MetroPop: Ganjil Genap</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/metropop-ganjil-genap_gramedia.jpg"></td>
                                     <td>Almira Bastari</td>
+                                    <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -289,6 +306,7 @@
                                     <td>Tokyo dan Perayaan Kesedihan</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/tokyo-dan-perayaan-kesedihan_gramedia.jpg"></td>
                                     <td>Ruth Priscilia Angelina</td>
+                                    <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -297,6 +315,7 @@
                                     <td> Segi Tiga</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/Segi-Tiga_gramedia.jpg"></td>
                                     <td>Sapardi Djoko Damono</td>
+                                    <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -305,6 +324,7 @@
                                     <td>Ibuk</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/Ibuk_Gramedia.jpg"></td>
                                     <td>Iwan Setyawan</td>
+                                    <td>Juvenile Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -313,6 +333,7 @@
                                     <td>Laut Bercerita</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/Laut-bercerita_gramedia.jpg"></td>
                                     <td>Leila S. Chudori</td>
+                                    <td>Foreign Language Study</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -321,6 +342,7 @@
                                     <td>Defending Jacob</td>
                                     <td><img src="https://www.gramedia.com/blog/content/images/2020/05/defending-jacob_gramedia.jpg"></td>
                                     <td>William Landay</td>
+                                    <td>Juvenile Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
                                     <td><button class="btn btn-primary" data-toggle="modal" data-target="#ModalDetail">Detail</button></td>
                                 </tr>
@@ -372,7 +394,7 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="editDesc" class="col-sm-2 col-form-label">Release Date</label>
+                      <label for="editDesc" class="col-sm-2 col-form-label">Published Date</label>
                       <div class="col-sm-4">
                         <p>20 Mar 2016</p>
                       </div>
@@ -405,7 +427,8 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-info" data-toggle="modal" data-target="#ModalReview">Review</button>
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+                  <a href="detailpageUser.html"><button type="button" class="btn btn-warning">Borrow</button></a>
+
                 </div>
               </div>
             </div>
@@ -487,95 +510,6 @@
           </div>
           <!-- Modal review -->
 
-          <!-- Modal add -->
-          <div class="modal fade" id="ModalAdd" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="editModalLabel">Add Book</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <form>
-                    <div class="form-group row">
-                      <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="editTitle" placeholder="Title...">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editWriter" class="col-sm-2 col-form-label">Writer</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="editWriter" placeholder="Writer...">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editPublisher" class="col-sm-2 col-form-label">Publisher</label>
-                      <div class="col-sm-10">
-                        <input type="text" class="form-control" id="editPublisher" placeholder="Publisher...">
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="form-group row">
-                      <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
-                      <div class="col-sm-10">
-                        <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editPages" class="col-sm-2 col-form-label">Number of Pages</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editPages" placeholder="Number of Pages...">
-                      </div>
-                      <label for="editIsbn" class="col-sm-2 col-form-label">ISBN</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editIsbn" placeholder="ISBN...">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editRelease" class="col-sm-2 col-form-label">Release Date</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editRelease" placeholder="Release Date...">
-                      </div>
-                      <label for="editWeight" class="col-sm-2 col-form-label">Weight</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editWeight" placeholder="Weight...">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editLang" class="col-sm-2 col-form-label">Language</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editLang" placeholder="Language...">
-                      </div>
-                      <label for="editWidth" class="col-sm-2 col-form-label">Width</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editWidth" placeholder="Width...">
-                      </div>
-                    </div>
-                    <div class="form-group row">
-                      <label for="editLength" class="col-sm-2 col-form-label">Length</label>
-                      <div class="col-sm-4">
-                        <input type="text" class="form-control" id="editLength" placeholder="Length...">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal add -->
-
       </div>
     </div>
 
@@ -598,6 +532,8 @@
     <script type="text/javascript" charset="utf8"
       src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <script src="assets/js/datatable.js"></script>
+
+    
 </body>
 
 </html>
