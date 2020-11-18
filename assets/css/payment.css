@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 body{
-  background-color: #E7E7E7;
+  background-color: #f7f7f7;
 }
 
 .header-payment{
@@ -53,18 +53,16 @@ body{
 .list-header{
   font-weight: bold;
   background-color: #3E5367;
-  color: #E7E7E7;
+  color: #f7f7f7;
   font-size: 1.1em;
 }
 
 .list-box .list-total{
   display: flex;
-  justify-content: center;
   align-items: center;
   font-weight: bold;
-  background-color: #3E5367;
-  color: #E7E7E7;
   font-size: 1.1em;
+  background-color: #e1e1e1;
 }
 
 .top-up-box p{
@@ -119,7 +117,7 @@ body{
 
 .modal .modal-debit .container-fluid .total{
   font-weight: bolder;
-  font-size: large;
+  font-size: 16px;
   color: black;
 }
 
@@ -144,7 +142,7 @@ body{
 }
 
 .payment-date{
-  background-color: gray;
+  background-color: #3E5367;
   color: white;
 }
 
@@ -156,8 +154,8 @@ body{
   color: red;
 }
 
-.lightgray{
-  background-color: lightgray;
+.shadow{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
 }
 
 .hide{
@@ -219,5 +217,11 @@ body{
   .modal .modal-debit .container-fluid .short-input{
     width: 100%;
     font-size: smaller;
+  }
+
+  .modal .modal-debit .container-fluid .total{
+    font-weight: bolder;
+    font-size: 14px;
+    color: black;
   }
 }

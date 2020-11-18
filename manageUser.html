@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/1.png" type="image/ico" />
+
+
+  <title>Faraday E-Library | Sistem Peminjaman Buku</title>
+
+  <!-- Bootstrap -->
+  <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!-- Slider Style -->
+  <link href="assets/css/styleSlider.css" rel="stylesheet" />
+  <!-- Custom Theme Style -->
+  <link href="assets/css/custom.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/carousel.css">
+  <link rel="stylesheet" href="assets/css/lightslider.css">
+
+  <!-- Data Tables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/manageUser.css">
+</head>
+
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title">
+              <img src="assets/images/1.png" alt="">
+              <span>Faraday E-Library</span>
+            </a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="assets/images/user.png" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>Admin</h2>
+            </div>
+          </div>
+          <div class="profile_name">
+            <h4>Admin</h4>
+          </div>
+          <!-- /menu profile quick info -->
+
+          <br />
+
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <h3>General</h3>
+              <ul class="nav side-menu">
+                <li><a href="index.html"><i class="fa fa-book"></i> Explore</a> </li>
+                <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
+                <li><a href="manageBook.html"><i class="fa fa-book"></i> Book Management</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /sidebar menu -->
+
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small d-flex flex-row">
+            <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+            <!-- <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a> -->
+          </div>
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand navbar-dark nav_menu shadow">
+          <ul class="navbar-nav">
+            <li class="nav-item pr-3">
+              <a id="menu_toggle" style="color:#495464 !important;"><i class="fa fa-bars"></i></a>
+            </li>
+            <li class="nav-item dropdown open">
+              <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown2" data-toggle="dropdown"
+                aria-expanded="false" style="color:#495464 !important;">
+                Categories
+              </a>
+              <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown2">
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="message">
+                      Action
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="message">
+                      Novel
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="message">
+                      Fiksi
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <div class="text-center">
+                    <a class="dropdown-item">
+                      <strong>See All Categories</strong>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav ml-auto">
+            <li role="presentation" class="nav-item dropdown open" style="padding-left: 15px; padding-top:8px;">
+              <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown"
+                aria-expanded="false" style="color:#495464 !important;">
+                <i class="fa fa-bell fa-lg"></i>
+              </a>
+              <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                    <span>
+                      <span>John Smith</span>
+
+                    </span>
+                    <span class="message">
+                      Film festivals used to be do-or-die moments for movie makers. They were where...
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                    <span>
+                      <span>John Smith</span>
+
+                    </span>
+                    <span class="message">
+                      Film festivals used to be do-or-die moments for movie makers. They were where...
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                    <span>
+                      <span>John Smith</span>
+
+                    </span>
+                    <span class="message">
+                      Film festivals used to be do-or-die moments for movie makers. They were where...
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="dropdown-item">
+                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                    <span>
+                      <span>John Smith</span>
+
+                    </span>
+                    <span class="message">
+                      Film festivals used to be do-or-die moments for movie makers. They were where...
+                    </span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <div class="text-center">
+                    <a class="dropdown-item">
+                      <strong>See All Alerts</strong>
+                      <i class="fa fa-angle-right"></i>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item" style="padding-left: 15px;">
+              <form class="form-inline pt-2">
+                <div class="input-group input-group-sm">
+                  <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search"
+                    style="background-color: white;border: 0; border-top-left-radius: 25px; border-bottom-left-radius: 25px;">
+                  <div class="input-group-append">
+                    <button class="btn btn-navbar m-0" type="submit"
+                      style="background-color: white;border: 0; border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
+                      <i class="fa fa-search pr-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        
+        <!-- history table -->
+        <div class="container">
+          <div class="card">
+            <h3 class="card-header">Manage User</h3>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="history" class="table table-striped table-bordered">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>ID</th>
+                      <th>Username</th>
+                      <th>Name</th>
+                      <th>Email Addres</th>
+                      <th>Password</th>
+                      <th>Identification Card</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Yosan27</td>
+                      <td>Yosan</td>
+                      <td>yosan27@gmail.com</td>
+                      <td>projectperpus</td>
+                      <td class="text-center"><button class="btn btn-warning" data-toggle="modal" data-target="#detail">Detail</button>
+                      </td>
+                      <td class="text-center"><button class="btn btn-danger" data-toggle="modal" data-target="#suspend">Suspend</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Cleoputra</td>
+                      <td>Cleo</td>
+                      <td>cleoputra@gmail.com</td>
+                      <td>projectperpus</td>
+                      <td class="text-center"><button class="btn btn-warning" data-toggle="modal" data-target="#detail">Detail</button>
+                      </td>
+                      <td class="text-center"><button class="btn btn-danger" data-toggle="modal" data-target="#suspend">Suspend</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Todi</td>
+                      <td>Todi Dewaranto</td>
+                      <td>todid@gmail.com</td>
+                      <td>projectperpus</td>
+                      <td class="text-center"><button class="btn btn-warning" data-toggle="modal" data-target="#detail">Detail</button>
+                      </td>
+                      <td class="text-center"><button class="btn btn-danger" data-toggle="modal" data-target="#suspend">Suspend</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /history table -->
+
+        <!-- modal identification -->
+        <div class="modal fade" id="detail" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editLabel">Identification</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+                <img id="detailImg" style="width: 50%; margin-left: 25%" src="https://img.favpng.com/6/1/21/identity-document-forgery-photo-identification-card-printer-badge-png-favpng-8UsS80yZfinYqa89SWnF75YPb.jpg">
+              <div class="modal-body">
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- modal identification -->
+       
+        <!-- modal suspend -->
+        <div class="modal fade" id="suspend" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editLabel">User Suspend</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure this person will get suspend ?</p>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">How many weeks ?</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /modal suspend-->
+      </div>
+      <!-- /page content -->
+
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right Reserved - Template by <a
+            href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
+
+      <!-- Modal add -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Add Book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="editTitle" placeholder="Title...">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- DateJS -->
+  <script src="vendors/DateJS/build/date.js"></script>
+
+  <!-- Custom Theme Scripts -->
+  <script src="assets/js/custom.min.js"></script>
+  <!-- Carousel -->
+  <script src="assets/js/lightslider.js"></script>
+  <script src="assets/js/slider.js"> </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="assets/js/slider2.js"></script>
+
+  <!-- Data Tables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js">
+  </script>
+  <script src="assets/js/datatable.js"></script>
+</body>
+
+</html>
