@@ -11,6 +11,22 @@ body {
   background: rgba(219, 226, 226, alpha);
 }
 
+#wrong-pass{
+  color: red;
+  font-style: italic;
+  font-size: smaller;
+}
+
+#wrong-user{
+  color: red;
+  font-style: italic;
+  font-size: smaller;
+}
+
+.hide{
+  display: none;
+}
+
 .row {
   background: white;
   border-radius: 30px;

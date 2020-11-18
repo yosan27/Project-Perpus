@@ -496,14 +496,14 @@
               <div class="row pb-3">
                 <div class="col-md">
                   <label for="nameCard"><b>Nama pemilik kartu</b></label><br>
-                  <input class="long-input" type="text" name="nameCard" autocomplete="off" size="34">
+                  <input class="long-input" type="text" name="nameCard" autocomplete="off" size="34" required>
                 </div>
               </div>
 
               <div class="row pb-3">
                 <div class="col-md">
                   <label for="cardNumber"><b>Nomor kartu</b></label><br>
-                  <input class="long-input" type="text" name="cardNumber" autocomplete="off" size="34">
+                  <input class="long-input" type="text" name="cardNumber" autocomplete="off" size="34" required>
                 </div>
               </div>
 
@@ -519,25 +519,25 @@
 
               <div class="row pb-3">
                 <div class="col">
-                  <input class="short-input" type="text" name="cvc" placeholder="cth.311" autocomplete="off" size="3">
+                  <input class="short-input" type="text" name="cvc" placeholder="cth.311" autocomplete="off" size="3" required>
                 </div>
 
                 <div class="col">
-                  <input class="short-input" type="text" name="masa" placeholder="Bulan" autocomplete="off" size="5">
+                  <input class="short-input" type="text" name="masa" placeholder="Bulan" autocomplete="off" size="5" required>
                 </div>
 
                 <div class="col d-flex justify-content-start">
-                  <input class="short-input" type="text" name="masa" placeholder="Tahun" autocomplete="off" size="5">
+                  <input class="short-input" type="text" name="masa" placeholder="Tahun" autocomplete="off" size="5" required>
                 </div>
               </div>
 
               <div class="row">
                 <div class="total col d-flex align-items-center pl-3 pt-3 pb-3">
-                  Total :<span class="pl-3">10000</span>
+                  Total :<span class="pl-3" id="total-debit">0</span>
                 </div>
 
                 <div class="col d-flex align-items-center justify-content-end">
-                  <button class="btn btn-success" type="button" data-toggle="modal" data-target="#payDebitModal" data-dismiss="modal">Pay</button>
+                  <button class="btn btn-success" type="button" data-toggle="modal" data-target="#payDebitModal" data-dismiss="modal" id="debit-pay-btn">Pay</button>
                 </div>
               </div>
             </div>
