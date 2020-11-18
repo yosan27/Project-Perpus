@@ -5,23 +5,15 @@ body {
 }
 
 .nav_title a span{
-  font-size: 17px;
+  font-size: 60px;
 }
 
 .nav_title a img{
   width: 40px;
 }
 
-.history {
-  margin-top: 10%;
-}
-
 .history h3{
-  display: inline;
-}
-
-.history button {
-  float: right;
+  padding-top: 70px;
 }
 
 .modal{
@@ -43,38 +35,25 @@ body {
   text-align: center;
 }
 
-td {
-  max-width: 300px;
+#detailImg {
+  width: 10%;
 }
 
-td button {
-  margin-left: 5%;
-}
 
-table img {
-  width: 50%;
-}
-
-form p {
-  color: black;
-  margin-top: 5px;
-  text-align: justify;
-}
-
-.checked {
-  color: orange;
-}
 
 @media only screen and (max-width: 768px) {
   .profile_name{
     display: inline;
   }
 
-  table img {
-    width: 100%;
-    margin-left: 1%;
+  .btn-warning{
+  margin-left: 15%;
+} 
 
-  }
+.btn-danger{
+  margin-left: 5%;
+}
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -86,9 +65,12 @@ form p {
     font-size: 25px;
   }
 
-  table img {
-    width: 100%;
-    margin-left: 1%;
+  .btn-warning{
+    margin-left: 15%;
+  }
+
+  .btn-danger{
+    margin-left: 5%;
   }
 
 }
@@ -98,12 +80,12 @@ form p {
     font-size: 25px;
   }
 
-  table img {
-    width: 80%;
-    margin-left: 10%; 
+  .btn-warning{
+    margin-left: 15%;
   }
 
-  table button {
-    margin-left: 7%;
+  .btn-danger{
+    margin-left: 5%;
   }
+
 }
