@@ -91,9 +91,21 @@ button.arrowbackbutton:hover {
 }
 
 /* iPad & iPad pro */
-@media only screen and (max-width: 1024px) and (orientation:portrait) {
+@media only screen and (max-width: 1024px) {
   div.container.absolute {
     position: absolute;
     margin-top: 2vh;
+  }
+
+  img.rounded.novel {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  img.rounded.novel {
+    width: 15vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 }
