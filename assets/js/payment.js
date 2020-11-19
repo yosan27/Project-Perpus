@@ -41,7 +41,7 @@ const saldo = document.querySelector('.header-logo-bar .saldo');
 saldo.innerHTML = 100000;
 
 // list denda
-const telat = 5000;
+const telat = 2000;
 const kosong = 0;
 
 list1.innerHTML = telat;
