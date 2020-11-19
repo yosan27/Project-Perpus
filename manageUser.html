@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- test -->
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -8,8 +7,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <link rel="icon" href="assets/images/1.png" type="image/ico" />
+
+
   <title>Faraday E-Library | Sistem Peminjaman Buku</title>
 
   <!-- Bootstrap -->
@@ -24,7 +24,11 @@
   <link rel="stylesheet" href="assets/css/carousel.css">
   <link rel="stylesheet" href="assets/css/lightslider.css">
 
+  <!-- Data Tables -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
   <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/manageUser.css">
 </head>
 
 <body class="nav-md">
@@ -66,9 +70,8 @@
               </ul>
               <h3>General</h3>
               <ul class="nav side-menu">
-                <li><a href=""><i class="fa fa-book"></i> Explore</a> </li>
+                <li><a href="index.html"><i class="fa fa-book"></i> Explore</a> </li>
                 <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
-                <li><a href="manageBook.html"><i class="fa fa-book"></i> Book Management</a></li>
                 <li>
                   <a>
                     <i class="fa fa-edit"></i> Manage <span class="fa fa-chevron-down"></span>
@@ -78,7 +81,6 @@
                     <li><a href="manageBook.html">Book</a></li>
                   </ul>
                 </li>
-                <li><a href="manageDonation.html"><i class="fa fa-gift"></i> Donation Management</a></li>
               </ul>
             </div>
           </div>
@@ -229,258 +231,123 @@
 
       <!-- page content -->
       <div class="right_col" role="main">
-        <!-- slider Book -->
-        <section class="mt-2 mb-3">
-          <div class="slider">
-            <div class="item item1">
-              <div class="item-inner">
-                <div class="text-slide">
-                  <span class="title-slide">
-                    Title Book
-                  </span>
-                  <br>
-                  <span class="author-slide">
-                    Raditya
-                  </span>
-                  <br><br>
-                  <span class="detail-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores obcaecati nemo a architecto,
-                    reprehenderit delectus nihil omnis recusandae.
-                  </span>
-                </div>
+
+      <!-- title-->
+      <div class="container collections pt-5">
+      <h3 class="pt-3">User Management</h3>
+      </div>
+      <!-- /title -->
+        
+        <!-- history table -->
+        <div class="container">
+              <div class="table-responsive">
+                <table id="history" class="table table-striped table-bordered">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>ID</th>
+                      <th>Username</th>
+                      <th>Name</th>
+                      <th>Email Addres</th>
+                      <th>Status</th>
+                      <th>Identification Card</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Yosan27</td>
+                      <td>Yosan</td>
+                      <td>yosan27@gmail.com</td>
+                      <td>Active</td>
+                      <td class="text-center"><button class="btn btn-warning" data-toggle="modal" data-target="#detail">Detail</button>
+                      </td>
+                      <td class="text-center"><button class="btn btn-danger" data-toggle="modal" data-target="#suspend">Suspend</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Cleoputra</td>
+                      <td>Cleo</td>
+                      <td>cleoputra@gmail.com</td>
+                      <td>Suspended for 1 week</td>
+                      <td class="text-center"><button class="btn btn-warning" data-toggle="modal" data-target="#detail">Detail</button>
+                      </td>
+                      <td class="text-center"><button class="btn btn-danger" data-toggle="modal" data-target="#suspend" disabled>Suspend</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Todi</td>
+                      <td>Todi Dewaranto</td>
+                      <td>todid@gmail.com</td>
+                      <td>Active</td>
+                      <td class="text-center"><button class="btn btn-warning" data-toggle="modal" data-target="#detail">Detail</button>
+                      </td>
+                      <td class="text-center"><button class="btn btn-danger" data-toggle="modal" data-target="#suspend">Suspend</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-            </div>
-            <div class="item item2">
-              <div class="item-inner">
-                <div class="text-slide">
-                  <span class="title-slide">
-                    Title Book
-                  </span>
-                  <br>
-                  <span class="author-slide">
-                    Raditya
-                  </span>
-                  <br><br>
-                  <span class="detail-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores obcaecati nemo a architecto,
-                    reprehenderit delectus nihil omnis recusandae.
-                  </span>
-                </div>
+        </div>
+        <!-- /history table -->
+
+        <!-- modal identification -->
+        <div class="modal fade" id="detail" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editLabel">Identification</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-            </div>
-            <div class="item item3">
-              <div class="item-inner">
-                <div class="text-slide">
-                  <span class="title-slide">
-                    Title Book
-                  </span>
-                  <br>
-                  <span class="author-slide">
-                    Raditya
-                  </span>
-                  <br><br>
-                  <span class="detail-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores obcaecati nemo a architecto,
-                    reprehenderit delectus nihil omnis recusandae.
-                  </span>
-                </div>
+                <img id="detailImg" style="width: 50%; margin-left: 25%" src="https://img.favpng.com/6/1/21/identity-document-forgery-photo-identification-card-printer-badge-png-favpng-8UsS80yZfinYqa89SWnF75YPb.jpg">
+              <div class="modal-body">
               </div>
-            </div>
-            <div class="item item4">
-              <div class="item-inner">
-                <div class="text-slide">
-                  <span class="title-slide">
-                    Title Book
-                  </span>
-                  <br>
-                  <span class="author-slide">
-                    Raditya
-                  </span>
-                  <br><br>
-                  <span class="detail-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores obcaecati nemo a architecto,
-                    reprehenderit delectus nihil omnis recusandae.
-                  </span>
-                </div>
-              </div>
-            </div>
-            <div class="item item5">
-              <div class="item-inner">
-                <div class="text-slide">
-                  <span class="title-slide">
-                    Title Book
-                  </span>
-                  <br>
-                  <span class="author-slide">
-                    Raditya
-                  </span>
-                  <br><br>
-                  <span class="detail-slide">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores obcaecati nemo a architecto,
-                    reprehenderit delectus nihil omnis recusandae.
-                  </span>
-                </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
               </div>
             </div>
           </div>
-        </section>
-
-        <!--Best Seller---------------------->
-        <section id="latest" class="best">
-          <h2 class="latest-heading">Best Seller</h2>
-
-          <ul id="autoWidth2" class="cs-hidden ulBest">
-            <li class="item-a">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/nebula.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Nebula</strong>
-                    <p>Tere Liye</p>
-                  </div>
+        </div>
+        <!-- modal identification -->
+       
+        <!-- modal suspend -->
+        <div class="modal fade" id="suspend" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editLabel">User Suspend</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure this person will get suspend ?</p>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">How many weeks ?</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
                 </div>
-              </a>
-            </li>
+              </div>
 
-            <li class="item-b">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/selena.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Selena</strong>
-                    <p>Tere Liye</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-c">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/laut.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Laut Bercerita</strong>
-                    <p>Leila S. Chudori</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-d">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/ibuk.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Ibuk</strong>
-                    <p>Iwan Setyawan</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-e">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/tokyo.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong class="smaller">Tokyo dan Perayaan Kesedihan</strong>
-                    <p>Ruth Priscilia Angelina</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-f">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/after.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>After the Funeral</strong>
-                    <p>Agatha Christie</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-g">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/segitiga.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Segi Tiga</strong>
-                    <p>Sapardi Djoko Damono</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-h">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/metro.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>MetroPop: Ganjil Genap</strong>
-                    <p>Almira Bastari</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-i">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/defending.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Defending Jacob</strong>
-                    <p>William Landay</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-
-            <li class="item-j">
-              <a href="detailpage.html">
-                <div class="latest-box">
-                  <div class="latest-b-img">
-                    <img src="assets/images/misteri.jpg">
-                  </div>
-
-                  <div class="latest-b-text">
-                    <strong>Misteri Terakhir #1</strong>
-                    <p>S. Mara Gd.</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </section>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /modal suspend-->
       </div>
       <!-- /page content -->
 
@@ -493,42 +360,42 @@
         <div class="clearfix"></div>
       </footer>
       <!-- /footer content -->
-    </div>
 
-    <!-- Modal add -->
-    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="editModalLabel">Add Book</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group row">
-                <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
+      <!-- Modal add -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="editModalLabel">Add Book</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group row">
+                  <label for="editImage" class="col-sm-2 col-form-label">Url Image</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="editImage" placeholder="Url Image...">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
-                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="editTitle" placeholder="Title...">
+                <div class="form-group row">
+                  <label for="editTitle" class="col-sm-2 col-form-label">Title</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="editTitle" placeholder="Title...">
+                  </div>
                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
-                <div class="col-sm-10">
-                  <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
+                <div class="form-group row">
+                  <label for="editDesc" class="col-sm-2 col-form-label">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="editDesc" placeholder="Description..."></textarea>
+                  </div>
                 </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" data-dismiss="modal">Save</button>
+            </div>
           </div>
         </div>
       </div>
@@ -550,8 +417,10 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/js/slider2.js"></script>
 
-  <!-- click -->
-  <script src="assets/js/detailClick.js"></script>
+  <!-- Data Tables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js">
+  </script>
+  <script src="assets/js/datatable.js"></script>
 </body>
 
 </html>

@@ -26,6 +26,9 @@
 
   <!-- Data Tables -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
+
   <link rel="stylesheet" href="assets/css/cart.css">
   <link rel="stylesheet" href="assets/css/layout.css">
 </head>
@@ -64,6 +67,9 @@
           <!-- sidebar menu -->
           <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
             <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a href="profileUser.html"><i class="fa fa-user"></i> Profile</a> </li>
+              </ul>
               <h3>General</h3>
               <ul class="nav side-menu">
                 <li><a href="indexUser.html"><i class="fa fa-book"></i> Explore</a> </li>
@@ -182,126 +188,198 @@
         <!-- history table -->
         <div class="container">
           <div class="table-responsive">
-            <table id="history" class="table table-striped table-bordered">
+            <table id="history" class="table table-striped table-bordered nowrap" style="width:100%">
               <thead class="thead-dark">
                 <tr>
                   <th>Transaction ID</th>
+                  <th>Action</th>
                   <th>Book Title</th>
                   <th>Date Borrowed</th>
                   <th>Due Date</th>
                   <th>Date Returned</th>
                   <th>Status</th>
-                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>202010052078</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Unbranding</td>
                   <td>2020/10/05</td>
                   <td>2020/10/11</td>
                   <td>2020/10/09</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010052079</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Koala Kumal</td>
                   <td>2020/10/05</td>
                   <td>2020/10/11</td>
                   <td>2020/10/09</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010082453</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Laut Bercerita</td>
                   <td>2020/10/08</td>
                   <td>2020/10/14</td>
                   <td>2020/10/14</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010092605</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Pulang</td>
                   <td>2020/10/09</td>
                   <td>2020/10/15</td>
                   <td>2020/10/14</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010092606</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Becoming</td>
                   <td>2020/10/09</td>
                   <td>2020/10/15</td>
                   <td>2020/10/16</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010163390</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>The Book You Wish Your Parents Had Read</td>
                   <td>2020/10/16</td>
                   <td>2020/10/22</td>
                   <td>2020/10/21</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010305132</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Nanti Kita Cerita Tentang Hari Ini</td>
                   <td>2020/10/30</td>
                   <td>2020/11/05</td>
                   <td>2020/11/04</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010305133</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Book of Invisible Question</td>
                   <td>2020/10/30</td>
                   <td>2020/11/05</td>
                   <td>2020/11/04</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202011065898</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Atomic Habits</td>
                   <td>2020/11/06</td>
                   <td>2020/11/12</td>
                   <td>2020/11/13</td>
-                  <td class="table-success">Returned</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202011126431</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Hujan</td>
                   <td>2020/11/12</td>
                   <td>2020/11/18</td>
                   <td></td>
-                  <td class="table-danger">Overdue</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-danger">Overdue</span></td>
                 </tr>
                 <tr>
                   <td>202011166876</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Dilan 1990</td>
                   <td>2020/11/16</td>
                   <td>2020/11/22</td>
                   <td></td>
-                  <td class="table-warning">Borrowed</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
                 </tr>
                 <tr>
                   <td>202011166877</td>
+                  <td>
+                    <span class="d-flex justify-content-center" data-toggle="modal" data-target="#detail">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Detail">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                  </td>
                   <td>Dilan 1991</td>
                   <td>2020/11/16</td>
                   <td>2020/11/22</td>
                   <td></td>
-                  <td class="table-warning">Borrowed</td>
-                  <td><button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#detail">Detail</button></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
                 </tr>
               </tbody>
             </table>
@@ -324,75 +402,86 @@
                   <div class="form-group row">
                     <label for="transactionID" class="col-sm-3 col-form-label">Transaction ID</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="transactionID" value="202011202011">
+                      <input type="text" readonly class="form-control-plaintext" id="transactionID"
+                        value="202011202011">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="bookTitle" class="col-sm-3 col-form-label">Book Title</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="bookTitle" value="Title">
+                      <input type="text" readonly class="form-control-plaintext" id="bookTitle" value="Dilan 1990">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="dateBorrowed" class="col-sm-3 col-form-label">Date Borrowed</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="dateBorrowed" value="yyyy/mm/dd">
+                      <input type="text" readonly class="form-control-plaintext" id="dateBorrowed" value="11/11/2020">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="dueDate" class="col-sm-3 col-form-label">Due Date</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="dueDate" value="yyyy/mm/dd">
+                      <input type="text" readonly class="form-control-plaintext" id="dueDate" value="11/18/2020">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="dateReturned" class="col-sm-3 col-form-label">Date Returned</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="dateReturned" value="yyyy/mm/dd">
+                      <input type="text" readonly class="form-control-plaintext" id="dateReturned" value="11/20/2020">
                     </div>
                   </div>
                   <hr>
                   <div class="form-group row">
-                    <label for="latefine" class="col-sm-3 col-form-label">Late Fine</label>
+                    <label for="late" class="col-sm-3 col-form-label">Late</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="latefine" value="Rp 0">
+                      <input type="text" readonly class="form-control-plaintext pb-0" id="late" value="Rp 2.000">
+                      <small class="form-text text-muted pb-2">2 days late</small>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="damagefine" class="col-sm-3 col-form-label">Damage Fine</label>
+                    <label for="damage" class="col-sm-3 col-form-label">Damage</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="damagefine" value="Rp 0">
+                      <input type="text" readonly class="form-control-plaintext pb-0" id="damage" value="Rp 10.000">
+                      <small class="form-text text-muted pb-2">Torn</small>
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="totalfine" class="col-sm-3 col-form-label">Total Fine</label>
                     <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="totalfine" value="Rp 0">
+                      <input type="text" readonly class="form-control-plaintext" id="totalfine" value="Rp 12.000">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                    <div class="col-sm-8">
+                      <span class="badge badge-info">Waiting for Payment</span>
                     </div>
                   </div>
                 </form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <a href="payment.html"><button type="button" class="btn btn-success">Payment</button></a>
+                <a href="payment.html"><button type="button" class="btn btn-info">Payment</button></a>
               </div>
             </div>
           </div>
         </div>
         <!-- /modal detail-->
+
+        
       </div>
       <!-- /page content -->
 
-  <!-- footer content -->
-  <footer>
-    <div class="pull-right">
-      2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right Reserved - Template by <a
-        href="https://colorlib.com">Colorlib</a>
+      <!-- footer content -->
+      <footer>
+        <div class="pull-right">
+          2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right Reserved - Template by <a
+            href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+      </footer>
+      <!-- /footer content -->
     </div>
-    <div class="clearfix"></div>
-  </footer>
-  <!-- /footer content -->
-  </div>
   </div>
 
   <!-- jQuery -->
@@ -410,10 +499,13 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/js/slider2.js"></script>
 
-  <!-- Data Tables -->
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js">
-  </script>
+  <!-- DataTables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap.min.js"></script>
   <script src="assets/js/datatable.js"></script>
+
 </body>
 
 </html>

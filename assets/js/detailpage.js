@@ -10,8 +10,12 @@ fetch('https://www.googleapis.com/books/v1/volumes/U_-BBAAAQBAJ')
       // Examine the text in the response
       response.json().then(function(data) {
         console.log(data);
+        document.getElementById('bookId').innerHTML = data.id
         document.getElementById('bookTitle').innerHTML = data.volumeInfo.title
+        document.getElementById('bookTitleModal').innerHTML = data.volumeInfo.title
+        document.getElementById('bookTitleModal2').innerHTML = data.volumeInfo.title
         document.getElementById('publishedAt').innerHTML = data.volumeInfo.publishedDate
+        document.getElementById('author').innerHTML = data.volumeInfo.authors
         document.getElementById('bookCategories').innerHTML = data.volumeInfo.categories[0]
         // document.getElementById('bookCover').innerHTML = data.volumeInfo.imageLinks.thumbnail
         document.getElementById('bookDescription').innerHTML = data.volumeInfo.description
