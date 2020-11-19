@@ -73,16 +73,16 @@
                                 <li><a href="historyUser.html"><i class="fa fa-history"></i> History</a></li>
                                 <li><a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a></li>
                                 <li>
-                                <a>
-                                    <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
-                                </a>
-                                <ul class="nav child_menu">
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
+                                    <a>
+                                        <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
+                                    </a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
-                                <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donasi</a></li>
+                                <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donation</a></li>
                             </ul>
                         </div>
                     </div>
@@ -149,79 +149,11 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
-                        <li role="presentation" class="nav-item dropdown open"
-                            style="padding-left: 15px; padding-top:8px;">
-                            <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1"
-                                data-toggle="dropdown" aria-expanded="false" style="color:#495464 !important;">
-                                <i class="fa fa-bell fa-lg"></i>
+                        <li class="nav-item" style="padding-left: 15px;">
+                            <a href="cart.html" class="nav-link" style="color:#495464 !important;">
+                                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
+                                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
                             </a>
-                            <ul class="dropdown-menu list-unstyled msg_list" role="menu"
-                                aria-labelledby="navbarDropdown1">
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="assets/images/user.png"
-                                                alt="Profile Image" /></span>
-                                        <span>
-                                            <span>John Smith</span>
-
-                                        </span>
-                                        <span class="message">
-                                            Film festivals used to be do-or-die moments for movie makers. They were
-                                            where...
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="assets/images/user.png"
-                                                alt="Profile Image" /></span>
-                                        <span>
-                                            <span>John Smith</span>
-
-                                        </span>
-                                        <span class="message">
-                                            Film festivals used to be do-or-die moments for movie makers. They were
-                                            where...
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="assets/images/user.png"
-                                                alt="Profile Image" /></span>
-                                        <span>
-                                            <span>John Smith</span>
-
-                                        </span>
-                                        <span class="message">
-                                            Film festivals used to be do-or-die moments for movie makers. They were
-                                            where...
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dropdown-item">
-                                        <span class="image"><img src="assets/images/user.png"
-                                                alt="Profile Image" /></span>
-                                        <span>
-                                            <span>John Smith</span>
-
-                                        </span>
-                                        <span class="message">
-                                            Film festivals used to be do-or-die moments for movie makers. They were
-                                            where...
-                                        </span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <div class="text-center">
-                                        <a class="dropdown-item">
-                                            <strong>See All Alerts</strong>
-                                            <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item" style="padding-left: 15px;">
                             <form class="form-inline pt-2">
@@ -259,7 +191,7 @@
                     <div class="row justify-content-md-center">
                         <form>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Judul Buku</label>
+                                <label for="exampleFormControlInput1">Title</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Bumi Manusia">
                             </div>
@@ -274,24 +206,24 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Tahun</label>
+                                <label for="exampleFormControlInput1">Year Released</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="2020">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Penulis</label>
+                                <label for="exampleFormControlInput1">Author</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Pramodya A. Toer">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Kondisi</label>
+                                <label for="exampleFormControlTextarea1">Condition</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Foto Fisik</label>
+                                <label for="exampleFormControlInput1">Photo (Format: .png .jpeg)</label>
                                 <input class="form-control" type="file" id="avatar" name="avatar"
                                     accept="image/png, image/jpeg">
 

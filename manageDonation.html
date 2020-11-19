@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/images/1.png" type="image/ico" />
+
+
+    <title>Faraday E-Library | Sistem Peminjaman Buku</title>
+
+    <!-- Bootstrap -->
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Slider Style -->
+    <link href="assets/css/styleSlider.css" rel="stylesheet" />
+    <!-- Custom Theme Style -->
+    <link href="assets/css/custom.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/carousel.css">
+    <link rel="stylesheet" href="assets/css/lightslider.css">
+
+    <!-- Data Tables -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+    <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title">
+                            <img src="assets/images/1.png" alt="">
+                            <span>Faraday E-Library</span>
+                        </a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- menu profile quick info -->
+                    <div class="profile clearfix">
+                        <div class="profile_pic">
+                            <img src="assets/images/user.png" alt="..." class="img-circle profile_img">
+                        </div>
+                        <div class="profile_info">
+                            <span>Welcome,</span>
+                            <h2>Admin</h2>
+                        </div>
+                    </div>
+                    <div class="profile_name">
+                        <h4>User</h4>
+                    </div>
+                    <!-- /menu profile quick info -->
+
+                    <br />
+
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>General</h3>
+                            <ul class="nav side-menu">
+                                <li><a href="index.html"><i class="fa fa-book"></i> Explore</a> </li>
+                                <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
+                                <li><a href="manageBook.html"><i class="fa fa-book"></i> Book Management</a></li>
+                                <li><a href="manageDonation.html"><i class="fa fa-gift"></i> Donation Management</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /sidebar menu -->
+
+                    <!-- /menu footer buttons -->
+                    <div class="sidebar-footer hidden-small d-flex flex-row">
+                        <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        </a>
+                        <!-- <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a> -->
+                    </div>
+                    <!-- /menu footer buttons -->
+                </div>
+            </div>
+
+            <!-- top navigation -->
+            <div class="top_nav">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand navbar-dark nav_menu shadow">
+                    <ul class="navbar-nav">
+                        <li class="nav-item pr-3">
+                            <a id="menu_toggle" style="color:#495464 !important;"><i class="fa fa-bars"></i></a>
+                        </li>
+                        <li class="nav-item dropdown open">
+                            <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown2"
+                                data-toggle="dropdown" aria-expanded="false" style="color:#495464 !important;">
+                                Categories
+                            </a>
+                            <ul class="dropdown-menu list-unstyled msg_list" role="menu"
+                                aria-labelledby="navbarDropdown2">
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="message">
+                                            Action
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="message">
+                                            Novel
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="dropdown-item">
+                                        <span class="message">
+                                            Fiksi
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <div class="text-center">
+                                        <a class="dropdown-item">
+                                            <strong>See All Categories</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item" style="padding-left: 15px;">
+                            <a href="cart.html" class="nav-link" style="color:#495464 !important;">
+                                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
+                                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
+                            </a>
+                        </li>
+                        <li class="nav-item" style="padding-left: 15px;">
+                            <form class="form-inline pt-2">
+                                <div class="input-group input-group-sm">
+                                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                        aria-label="Search"
+                                        style="background-color: white;border: 0; border-top-left-radius: 25px; border-bottom-left-radius: 25px;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-navbar m-0" type="submit"
+                                            style="background-color: white;border: 0; border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
+                                            <i class="fa fa-search pr-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- /top navigation -->
+
+            <!-- page content -->
+            <div class="right_col" role="main">
+                <!-- title-->
+                <div class="container collections pt-5">
+                    <h3 class="pt-3">Donation Books Management</h3>
+                </div>
+                <!-- /title -->
+
+                <!-- books management table -->
+                <div class="container">
+                    <div class="table-responsive">
+                        <table id="collections" class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Book ID</th>
+                                    <th>Book Title</th>
+                                    <th>Author</th>
+                                    <th>Donation Date</th>
+                                    <th>Categories</th>
+                                    <th>Book Photo</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Selena</td>
+                                    <td>Tere Liye</td>
+                                    <td>2020-03-16</td>
+                                    <td>Young Adult Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Nebula</td>
+                                    <td>Tere Liye</td>
+                                    <td>2019-12-01</td>
+                                    <td>Young Adult Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/nebula_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Misteri Terakhir#1</td>
+                                    <td>S. Mara Gd</td>
+                                    <td>2020-04-06</td>
+                                    <td>Young Adult Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>MetroPop: Ganjil Genap</td>
+                                    <td>Almira Bastari</td>
+                                    <td>2020-08-18</td>
+                                    <td>Young Adult Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/metropop-ganjil-genap_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Tokyo dan Perayaan Kesedihan</td>
+                                    <td>Ruth Priscillia Angelina</td>
+                                    <td>2020-04-16</td>
+                                    <td>Young Adult Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/tokyo-dan-perayaan-kesedihan_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>SEGI TIGA (sebuah novel)</td>
+                                    <td>Sapardi Djoko Damono</td>
+                                    <td>2020-03-23</td>
+                                    <td>Young Adult Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/Segi-Tiga_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Ibuk</td>
+                                    <td>Iwan Setyawan</td>
+                                    <td>2016-05-16</td>
+                                    <td>Juvenile Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/Ibuk_Gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Laut Bercerita</td>
+                                    <td>Leila S. Chudori</td>
+                                    <td>2017-10-23</td>
+                                    <td>Foreign Language Study</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/Laut-bercerita_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Defending Jacob</td>
+                                    <td>William Landay</td>
+                                    <td>2017-12-18</td>
+                                    <td>Juvenile Fiction</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/defending-jacob_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2017100251</td>
+                                    <td>Rentang Kisah</td>
+                                    <td>Gita Savitri Devi</td>
+                                    <td>2017-11-01</td>
+                                    <td>Self-Help</td>
+                                    <td class="text-center">
+                                        <img height="80"
+                                            src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg">
+                                    </td>
+                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                        <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
+                                                class="fa fa-eye"></i></button>
+                                        <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
+                                                class="fa fa-check"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /tabel manajemen buku -->
+
+                <!-- Modal add -->
+                <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="editModalLabel">Detail Donation #2017100251</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container" id="demo">
+                                    <div class="row justify-content-md-center">
+                                        <img src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg"
+                                            height="350" alt="Donation Book">
+                                    </div>
+                                    <br />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Title</label>
+                                        <h5 class="col-lg-8 text-center"><b>Misteri Terakhir#1 </h5>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Author</label>
+                                        <h5 class="col-lg-8 text-center"><b>S. Mara Gd </h5>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Category</label>
+                                        <h5 class="col-lg-8 text-center"><b>Young Adult Fiction</h5>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Year</label>
+                                        <h5 class="col-lg-8 text-center"><b>2020</h5>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Category</label>
+                                        <h5 class="col-lg-8 text-center"><b>Young Adult Fiction</h5>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Condition</label>
+                                        <p class="col-lg-8 text-center">Kondisi bagus, tidak ada halaman hilang.</p>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Donatur</label>
+                                        <h5 class="col-lg-8 text-center"><b>Garen Dow</h5>
+                                    </div>
+                                    <hr />
+                                    <div class="row justify-content-md-center">
+                                        <label for="editTitle" class="col-sm-1 col-form-label">Donation Date</label>
+                                        <h5 class="col-lg-8 text-center"><b>2020-03-16</h5>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#dltSuccessModal">Reject</button>
+                                <button type="button" class="btn btn-success" data-toggle="modal"
+                                    data-target="#delete">Accept</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal add -->
+
+
+                <!-- modal verify data -->
+                <div class=" modal fade" id="delete" tabindex="-1" aria-labelledby="editLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="deleteLabel">Veriy The Donation to Faraday
+                                    E-library</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to accept the donation to Faraday E-Library?
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#deleteSuccessModal" data-dismiss="modal">Accept</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal delete -->
+
+                <!-- Modal verify success -->
+                <div class="modal fade" id="deleteSuccessModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <i class="fa fa-check-circle mb-2" style="color:green; font-size: 15vh;"></i>
+                                <p>Buku donasi berhasil diterima!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal delete success -->
+
+                <!-- Modal delete success -->
+                <div class="modal fade" id="dltSuccessModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body text-center">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <i class="fa fa-minus-circle mb-2" style="color:red; font-size: 15vh;"></i>
+                                <p>Buku donasi ditolak!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal delete success -->
+
+            </div>
+            <!-- /page content -->
+
+            <!-- footer content -->
+            <footer>
+                <div class="pull-right">
+                    2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right Reserved - Template by
+                    <a href="https://colorlib.com">Colorlib</a>
+                </div>
+                <div class="clearfix"></div>
+            </footer>
+            <!-- /footer content -->
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DateJS -->
+    <script src="vendors/DateJS/build/date.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="assets/js/custom.min.js"></script>
+    <!-- Carousel -->
+    <script src="assets/js/lightslider.js"></script>
+    <script src="assets/js/slider.js"> </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/slider2.js"></script>
+
+    <!-- Data Tables -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js">
+    </script>
+    <script src="assets/js/datatable.js"></script>
+</body>
+
+</html>
