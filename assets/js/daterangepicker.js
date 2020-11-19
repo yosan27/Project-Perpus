@@ -17,7 +17,6 @@
         return [pad(d.getMonth()+1), pad(d.getDate()), d.getFullYear()].join('/')
       }
       $( "#bataspengembalian" ).val(convertDate(date));
-      $("#addToCartButton").attr("disabled", false);
       });
   });
 
@@ -31,5 +30,4 @@
     .find("input")
        .val('')
        .end();
-       $("#addToCartButton").attr("disabled", true);
   })
