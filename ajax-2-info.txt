@@ -1,16 +1,11 @@
                     <div class="row justify-content-md-center">
-                        <img src="assets/images/donation2.png" class="img-fluid" alt="Responsive image">
+                        <img src="assets/images/donation5.png" class="img-fluid" alt="Responsive image">
                     </div>
                     <div class="row justify-content-md-center">
-                        <h4 class="col-lg-8 text-center"><i>"Kehadiranmu bisa memberi kesempatan semua insan
-                                dalam
-                                meraih informasi berkualitas"</i> <b>#jendeladunia</b> </h4>
+                        <h4 class="col-lg-8 text-center"><i>"Wawasan baru bagi seluruh elemen masyarakat agar menjadi penggerak perubahan informasi"</i> <b>#jendeladunia</b> </h4>
                     </div>
                     <br /><br />
                     <div class="row justify-content-md-center">
-			<div class="col-lg-2">
-                            <button type="button" class="btn btn-info" onclick="loadNextDoc()">Kenali lebih dalam</button>
-                        </div>
                         <div class="col-lg-2">
                             <a href="formdonasiUser.html"><button type="button" class="btn btn-outline-info">Donasi
                                     Sekarang!</button></a>
