@@ -23,6 +23,7 @@
   <link href="assets/css/custom.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/carousel.css">
   <link rel="stylesheet" href="assets/css/lightslider.css">
+  <link rel="stylesheet" href="assets/css/cart.css">
 
   <!-- Data Tables -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
@@ -32,6 +33,10 @@
 
   <link rel="stylesheet" href="assets/css/catalog.css">
   <link rel="stylesheet" href="assets/css/layout.css">
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body class="nav-md">
@@ -86,7 +91,7 @@
                   </ul>
                 </li>
                 <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
-                <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donasi</a></li>
+                <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donation</a></li>
               </ul>
             </div>
           </div>
@@ -152,69 +157,11 @@
             </li>
           </ul>
           <ul class="navbar-nav ml-auto">
-            <li role="presentation" class="nav-item dropdown open" style="padding-left: 15px; padding-top:8px;">
-              <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown"
-                aria-expanded="false" style="color:#495464 !important;">
-                <i class="fa fa-bell fa-lg"></i>
+            <li class="nav-item" style="padding-left: 15px;">
+              <a href="cart.html" class="nav-link" style="color:#495464 !important;">
+                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
+                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
               </a>
-              <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="dropdown-item">
-                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
-                    <span>
-                      <span>John Smith</span>
-                      <span class="time">3 mins ago</span>
-                    </span>
-                    <span class="message">
-                      Film festivals used to be do-or-die moments for movie makers. They were where...
-                    </span>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <div class="text-center">
-                    <a class="dropdown-item">
-                      <strong>See All Alerts</strong>
-                      <i class="fa fa-angle-right"></i>
-                    </a>
-                  </div>
-                </li>
-              </ul>
             </li>
             <li class="nav-item" style="padding-left: 15px;">
               <form class="form-inline pt-2">
@@ -262,7 +209,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Selena</td>
-                                    <td class="text-center"> <img src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg"></td>
+                                    <td class="text-center"> <img class="img-book" src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg"></td>
                                     <td>Tere Liye</td>
                                     <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -271,7 +218,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Nebula</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/nebula_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/nebula_gramedia.jpg"></td>
                                     <td>Tere Liye</td>
                                     <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -280,7 +227,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td> Misteri Terakhir #1 </td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg"></td>
                                     <td>S. Mara Gd</td>
                                     <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -289,7 +236,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td> After the Funeral (Setelah Pemakaman)</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/after-the-funeral_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/after-the-funeral_gramedia.jpg"></td>
                                     <td>Agatha Christie</td>
                                     <td>Detective and mystery stories</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -298,7 +245,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td> MetroPop: Ganjil Genap</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/metropop-ganjil-genap_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/metropop-ganjil-genap_gramedia.jpg"></td>
                                     <td>Almira Bastari</td>
                                     <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -307,7 +254,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Tokyo dan Perayaan Kesedihan</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/tokyo-dan-perayaan-kesedihan_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/tokyo-dan-perayaan-kesedihan_gramedia.jpg"></td>
                                     <td>Ruth Priscilia Angelina</td>
                                     <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -316,7 +263,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td> Segi Tiga</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/Segi-Tiga_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/Segi-Tiga_gramedia.jpg"></td>
                                     <td>Sapardi Djoko Damono</td>
                                     <td>Young Adult Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -325,7 +272,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Ibuk</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/Ibuk_Gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/Ibuk_Gramedia.jpg"></td>
                                     <td>Iwan Setyawan</td>
                                     <td>Juvenile Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -334,7 +281,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Laut Bercerita</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/Laut-bercerita_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/Laut-bercerita_gramedia.jpg"></td>
                                     <td>Leila S. Chudori</td>
                                     <td>Foreign Language Study</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -343,7 +290,7 @@
                                 <tr>
                                     <td>2017100251</td>
                                     <td>Defending Jacob</td>
-                                    <td class="text-center"><img src="https://www.gramedia.com/blog/content/images/2020/05/defending-jacob_gramedia.jpg"></td>
+                                    <td class="text-center"><img class="img-book"src="https://www.gramedia.com/blog/content/images/2020/05/defending-jacob_gramedia.jpg"></td>
                                     <td>William Landay</td>
                                     <td>Juvenile Fiction</td>
                                     <td>Gramedia Pustaka Utama</td>
@@ -353,6 +300,8 @@
                         </table>
                     </div>
                 </div>
+        
+
                 <!-- /tabel histori -->
         </div>
         <!-- /page content -->
@@ -512,9 +461,21 @@
             </div>
           </div>
           <!-- Modal review -->
-
+          
       </div>
     </div>
+
+
+    <script type="text/javascript">
+    $('.img-book').hover(makeBigger, returnToOriginalSize);
+      function makeBigger() {
+          $(this).css({width: '+=20%'});
+      }
+      function returnToOriginalSize() {
+          $(this).css({width: ""});
+      }
+    </script>
+
 
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
@@ -536,7 +497,7 @@
       src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
     <script src="assets/js/datatable.js"></script>
 
+  
     
 </body>
-
 </html>
