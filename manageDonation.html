@@ -71,7 +71,6 @@
                             <ul class="nav side-menu">
                                 <li><a href=""><i class="fa fa-book"></i> Explore</a> </li>
                                 <li><a href="history.html"><i class="fa fa-history"></i> History</a></li>
-                                <li><a href="manageBook.html"><i class="fa fa-book"></i> Book Management</a></li>
                                 <li>
                                     <a>
                                         <i class="fa fa-edit"></i> Manage <span class="fa fa-chevron-down"></span>
@@ -79,10 +78,11 @@
                                     <ul class="nav child_menu">
                                         <li><a href="manageUser.html">User</a></li>
                                         <li><a href="manageBook.html">Book</a></li>
+                                        <li><a href="manageDonation.html">Donation Management</a>
+                                        </li>
                                     </ul>
                                 </li>
-                                <li><a href="manageDonation.html"><i class="fa fa-gift"></i> Donation Management</a>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -149,12 +149,70 @@
                         </li>
                     </ul>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item" style="padding-left: 15px;">
-                            <a href="cart.html" class="nav-link" style="color:#495464 !important;">
-                                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
-                                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
+                        <li role="presentation" class="nav-item dropdown open" style="padding-left: 15px; padding-top:8px;">
+                            <a href="javascript:;" class="dropdown-toggle info-number" id="navbarDropdown1" data-toggle="dropdown"
+                                aria-expanded="false" style="color:#495464 !important;">
+                                <i class="fa fa-bell fa-lg"></i>
                             </a>
-                        </li>
+                            <ul class="dropdown-menu list-unstyled msg_list" role="menu" aria-labelledby="navbarDropdown1">
+                                <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                                    <span>
+                                    <span>John Smith</span>
+                
+                                    </span>
+                                    <span class="message">
+                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                                    <span>
+                                    <span>John Smith</span>
+                
+                                    </span>
+                                    <span class="message">
+                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                                    <span>
+                                    <span>John Smith</span>
+                
+                                    </span>
+                                    <span class="message">
+                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="dropdown-item">
+                                    <span class="image"><img src="assets/images/user.png" alt="Profile Image" /></span>
+                                    <span>
+                                    <span>John Smith</span>
+                
+                                    </span>
+                                    <span class="message">
+                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                                </li>
+                                <li class="nav-item">
+                                <div class="text-center">
+                                    <a class="dropdown-item">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                                </li>
+                            </ul>
+                            </li>
                         <li class="nav-item" style="padding-left: 15px;">
                             <form class="form-inline pt-2">
                                 <div class="input-group input-group-sm">
@@ -209,7 +267,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -226,7 +284,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/nebula_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -243,7 +301,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -260,7 +318,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/metropop-ganjil-genap_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -277,7 +335,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/tokyo-dan-perayaan-kesedihan_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -294,7 +352,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/Segi-Tiga_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -311,7 +369,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/Ibuk_Gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -328,7 +386,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/Laut-bercerita_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -345,7 +403,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/defending-jacob_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -362,7 +420,7 @@
                                         <img height="80"
                                             src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg">
                                     </td>
-                                    <td class='d-flex justify-content-around mt-4' style="border:none;">
+                                    <td class="d-flex justify-content-around mt-4" style="border:none;">
                                         <button class="btn btn-primary" data-toggle="modal" data-target="#edit"><i
                                                 class="fa fa-eye"></i></button>
                                         <button class="btn btn-success" data-toggle="modal" data-target="#delete"><i
@@ -394,27 +452,27 @@
                                     <br />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Title</label>
-                                        <h5 class="col-lg-8 text-center"><b>Misteri Terakhir#1 </h5>
+                                        <h5 class="col-lg-8 text-center">Misteri Terakhir#1 </h5>
                                     </div>
                                     <hr />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Author</label>
-                                        <h5 class="col-lg-8 text-center"><b>S. Mara Gd </h5>
+                                        <h5 class="col-lg-8 text-center">S. Mara Gd </h5>
                                     </div>
                                     <hr />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Category</label>
-                                        <h5 class="col-lg-8 text-center"><b>Young Adult Fiction</h5>
+                                        <h5 class="col-lg-8 text-center">Young Adult Fiction</h5>
                                     </div>
                                     <hr />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Year</label>
-                                        <h5 class="col-lg-8 text-center"><b>2020</h5>
+                                        <h5 class="col-lg-8 text-center">2020</h5>
                                     </div>
                                     <hr />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Category</label>
-                                        <h5 class="col-lg-8 text-center"><b>Young Adult Fiction</h5>
+                                        <h5 class="col-lg-8 text-center">Young Adult Fiction</h5>
                                     </div>
                                     <hr />
                                     <div class="row justify-content-md-center">
@@ -424,12 +482,12 @@
                                     <hr />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Donatur</label>
-                                        <h5 class="col-lg-8 text-center"><b>Garen Dow</h5>
+                                        <h5 class="col-lg-8 text-center">Garen Dow</h5>
                                     </div>
                                     <hr />
                                     <div class="row justify-content-md-center">
                                         <label for="editTitle" class="col-sm-1 col-form-label">Donation Date</label>
-                                        <h5 class="col-lg-8 text-center"><b>2020-03-16</h5>
+                                        <h5 class="col-lg-8 text-center">2020-03-16</h5>
                                     </div>
 
                                 </div>
