@@ -121,6 +121,10 @@ body{
   color: black;
 }
 
+.modal .modal-debit .container-fluid .long-input{
+  width: 100%;
+}
+
 #payDebitModal{
   z-index: 10000;
 }
@@ -210,7 +214,6 @@ body{
   }
 
   .modal .modal-debit .container-fluid .long-input{
-    width: 100%;
     font-size: smaller;
   }
 
