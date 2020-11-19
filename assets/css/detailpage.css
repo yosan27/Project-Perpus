@@ -97,6 +97,13 @@ button.arrowbackbutton:hover {
     margin-top: 2vh;
   }
 
+  button.btn.btn-warning.borrow {
+    border-radius: 15px;
+    width: 13vh;
+    height: 4vh;
+    background-color: #FBCC38;
+  }
+
   img.rounded.novel {
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -107,5 +114,12 @@ button.arrowbackbutton:hover {
   img.rounded.novel {
     width: 15vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  button.btn.btn-warning.borrow {
+    border-radius: 7px;
+    width: 15vh;
+    height: 6vh;
+    background-color: #FBCC38;
   }
 }

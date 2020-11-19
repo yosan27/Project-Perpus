@@ -82,10 +82,17 @@ function delay(callback, ms) {
   $('[data-dismiss=modal]').on('click', function (e) {
     var $t = $(this),
         target = $t[0].href || $t.data("target") || $t.parents('.modal') || [];
-
+        
   $(target)
     .find("input")
        .val('')
        .end();
        $("#saveEdit").attr("disabled", true);
+       $("#edit").modal("hide"); 
   })
+
+  $(document).ready(function() {
+    $('#collections').dataTable( {
+        "pagingType": "full_numbers"
+      } );
+  } );

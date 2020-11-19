@@ -42,7 +42,7 @@
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="borrowModalLabel">Form Peminjaman</h5>
+          <h5 class="modal-title" id="borrowModalLabel">Book loan form</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -57,29 +57,30 @@
               </div>
               <div class="col-8 mt-3">
                 <div class="form-group row justify-content-start align-items-center">
-                  <label for="bookID" class="col-sm-4 col-form-label">ID :</label>
+                  <label for="bookID" class="col-sm-4 col-form-label">Register :</label>
                   <div class="col-lg-4">
                     <p id='bookId' class='mb-0'>id</p>
                   </div>
                 </div>
                 <div class="form-group row justify-content-start align-items-center">
-                  <label for="bookTitle" class="col-sm-4 col-form-label">Judul buku :</label>
+                  <label for="bookTitle" class="col-sm-4 col-form-label">Book Title :</label>
                   <div class="col-lg-4">
                     <p id='bookTitleModal' class='mb-0'>judul</p>
                   </div>
                 </div>
                 <div class="form-group row justify-content-start align-items-center">
-                  <label for="bookAuthor" class="col-sm-4 col-form-label">Pengarang :</label>
+                  <label for="bookAuthor" class="col-sm-4 col-form-label">Author :</label>
                   <div class="col-lg-4">
                     <p id='author' class='mb-0'>author</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+            
             <!-- info buku -->
             <!-- datepicker peminjaman -->
-            <div class="form-group row justify-content-start mt-5">
+            <!-- <div class="form-group row justify-content-start mt-5">
               <label for="borrowDate" class="col-sm-4 col-form-label">Tanggal peminjaman :</label>
               <div class="col-lg-6">
                 <input type="text" id="datepicker" class="form-control" placeholder="Masukan tanggal" value=''>
@@ -89,15 +90,15 @@
               <label for="borrowLimit" class="col-sm-4 col-form-label">Batas pengembalian :</label>
               <br>
               <div class="col-lg-6">
-                <input readonly id="bataspengembalian"  class="form-control" required>
+                <input readonly id="bataspengembalian"  class="form-control" required value="">
               </div>
-            </div>
+            </div> -->
             <!-- datepicker peminjaman -->
           </form>
         </div>
         <div class="modal-footer">
           <button id='borrowButton' type="submit" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
-          <button id='addToCartButton' type="submit" class="btn btn-success" data-toggle="modal" data-target="#cartSuccessModal" data-dismiss="modal"><i class="fa fa-plus"></i> Cart</button>
+          <button id='addToCartButton' type="submit" class="btn btn-success" data-dismiss="modal" data-toggle="modal" data-target="#cartSuccessModal"><i class="fa fa-plus"></i> Cart</button>
         </div>
       </div>
     </div>
@@ -115,7 +116,7 @@
           <i 
           class="fa fa-check-circle mb-2"
           style="color:green; font-size: 5vh;"></i>
-          <p>buku <b id='bookTitleModal2' class='mb-0'>judul</b> telah ditambahkan ke keranjang</p>
+          <p><b id='bookTitleModal2' class='mb-0'>judul</b> has been added to cart!</p>
         </div>
       </div>
     </div>
@@ -127,40 +128,97 @@
     <div class='container absolute'>
       <!-- info atas -->
       <div class="row description">
-        <div class="col-lg col-sm-4 text-center align-self-end">
+        <div class="col-lg col-sm-4 text-center align-self-center">
           <button id='bookCategories' type="button" class="btn btn-warning novel mb-3">Novel</button>
           <h1 id='bookTitle' class="text-uppercase mb-3">DILAN 1990</h1>
           <p id='publishedAt' class='mb-0'>30 Juni 2019</p>
         </div>
-        <div class="col-lg col-sm-4 
-        text-center align-self-end">
+        <div class="col-lg col-sm-4 text-center align-self-center">
           <h4 id='isAvailable' class="text-success">Available</h4>
+          <h4 id='isNotAvailable' class="text-danger">Not Available</h4>
         </div>
-        <div class="col-lg col-sm-4 text-center">
+        <div class="col-lg col-sm-4 text-center align-self-center">
           <img id='bookCover'
             src="https://res.cloudinary.com/todidewantoro/image/upload/v1604943658/bootcamp/covernya_ejy4v1.jpg"
             alt="Dilan 1990" class="rounded novel">
         </div>
       </div>
       <!-- info atas -->
+
       <!-- info bawah -->
-      <div class="row mt-5">
-        <div id='bookDescription' class="col-lg-8 mb-5 text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus aliquet tortor fermentum leo lobortis, sit
-          amet viverra orci pretium. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et
-          malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-          cubilia curae; Praesent lobortis neque quis lorem gravida gravida. Morbi ullamcorper volutpat neque, id semper
-          turpis varius vitae. Suspendisse ac condimentum odio, eget sollicitudin magna. Mauris lectus ipsum, congue
-          quis egestas at, placerat quis lacus. Sed sagittis finibus interdum.
-        </div>
-        <div class="col-lg-4 text-center">
-          <div class='p-5'>
-            <!-- <button id='isBorrowed' data-toggle="modal" data-target="#isBorrowed" type="button"
-              class="btn btn-warning borrow">Borrow</button> -->
+      <!-- Descriptions & most popular-->
+        <div class="row justify-content-between mt-5">
+          <!-- Description -->
+          <div class="col-lg-8">
+            <h5 class='pb-2'>Descriptions</h5>
+            <hr style="border:5% solid #f1f1f1">
+            <h5><b id='bookSubtitle'>Subtitle</b></h5>
+            <blockquote class="blockquote">
+              <footer id='bookAuthor' class="blockquote-footer">author</footer>
+            </blockquote>
+            <div  class=" mb-5 text-justify">
+              <p id='bookDescriptionHead'>
+                In 1990, Milea along with her parents and sister Airin moved from Jakarta to Bandung. Her father is an Army officer. On her way to the school, she met Dilan, most-known as a 'bad boy' and leader of a motorbike gang who convinced her that she will sit on his bike with him as her boyfriend one day. Dilan started to flirt with her by coming to her house, making calls from a payphone and sending her odd but romantic gifts which includes a pre-filled crossword puzzle book: "so you don’t have to think about the answers". Unfortunately, Milea already has a boyfriend named Benni back in Jakarta. Despite that, she is no longer feels comfortable with him since he is perceived as rude and foul-mouthed. With Dilan's frequent overconfident movements, which initially made Nandan – her close friend who is in love with her – uncomfortable, Milea starts to develop feelings for him.
+              </p>
+            </div>
+            <hr style="border:5% solid #f1f1f1">
+            <!-- description2/synopsis -->
+            <div  class=" mb-5 text-justify">
+              <p id='bookDescription'>
+                book description
+              </p>
+            </div>
+            <!-- description2/synopsis -->
           </div>
+          <!-- Description -->
+
+          <!-- most popular -->
+          <div class="col-lg-3">
+            <h5 class='pb-2 text-center'>Popular this week</h5>
+            <hr/>
+            <div class="row">
+              <div class="col text-center pt-2">
+                  <img rounded height="80" src="https://www.gramedia.com/blog/content/images/2020/05/selena_gramedia.jpg">
+              </div>
+              <div class="col">
+                <blockquote class="blockquote">
+                  <p class="mb-0 small">Selena</p>
+                  <footer class="blockquote-footer">authored by <cite title="Source Title">Tere Liye</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center pt-2">
+                  <img rounded height="80" src="https://www.gramedia.com/blog/content/images/2020/05/nebula_gramedia.jpg">
+              </div>
+              <div class="col">
+                <blockquote class="blockquote">
+                  <p class="mb-0 small">Nebula</p>
+                  <footer class="blockquote-footer">authored by <cite title="Source Title">Tere Liye</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col text-center pt-2">
+                  <img rounded height="80" src="https://www.gramedia.com/blog/content/images/2020/05/misteri-terakhir_gramedia.jpg">
+              </div>
+              <div class="col ">
+                <blockquote class="blockquote">
+                  <p class="mb-0 small">Misteri Terakhir#1</p>
+                  <footer class="blockquote-footer">authored by <cite title="Source Title">S. Mara Gd</cite></footer>
+                </blockquote>
+              </div>
+            </div>
+            <!-- button borrow -->
+              <!-- <div class='text-center mt-5 mb-5'>
+                <button id='isBorrowed' data-toggle="modal" data-target="#isBorrowed" type="button"
+                  class="btn btn-warning borrow">Borrow</button>
+              </div> -->
+            <!-- button borrow -->
+          </div>
+          <!-- most popular -->
         </div>
-      </div>
-      <!-- info bawah -->
+        <!-- Descriptions & most popular -->
     </div>
   </div>
   <!-- main content -->

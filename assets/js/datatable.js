@@ -7,8 +7,3 @@ $(document).ready(function() {
 } );
 
 
-$(document).ready(function() {
-  $('#collections').dataTable( {
-      "pagingType": "full_numbers"
-    } );
-} );
