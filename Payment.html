@@ -61,11 +61,11 @@
       
       <div class="row list-header pl-4 pb-2 pt-2 border-bottom border-secondary">
         <div class="col ml-4">
-          No.
+          Order ID
         </div>
 
         <div class="col d-flex justify-content-center">
-          Description
+          Details
         </div>
 
         <div class="col d-flex justify-content-end pr-5">
@@ -79,7 +79,7 @@
         </div>
 
         <div class="col d-flex justify-content-center">
-          Telat
+          Late
         </div>
 
         <div class="denda col d-flex justify-content-end pr-5">
@@ -92,7 +92,7 @@
         </div>
 
         <div class="col d-flex justify-content-center">
-          Telat
+          Late
         </div>
 
         <div class="denda col d-flex justify-content-end pr-5">
@@ -105,7 +105,7 @@
         </div>
 
         <div class="col d-flex justify-content-center">
-          Telat
+          Late
         </div>
 
         <div class="denda col d-flex justify-content-end pr-5">
@@ -118,7 +118,7 @@
         </div>
 
         <div class="col d-flex justify-content-center">
-          Telat
+          Late
         </div>
 
         <div class="denda col d-flex justify-content-end pr-5">
@@ -131,7 +131,7 @@
         </div>
 
         <div class="col d-flex justify-content-center">
-          Telat
+          Late
         </div>
 
         <div class="denda col d-flex justify-content-end pr-5">
@@ -144,7 +144,7 @@
         </div>
 
         <div class="col d-flex justify-content-center">
-          Telat
+          Late
         </div>
 
         <div class="denda col d-flex justify-content-end pr-5">
@@ -169,7 +169,7 @@
     <!-- No Bill -->
     <div class="container d-flex justify-content-center">
       <div class="hide p-5" id="no-bill">
-        <span>Tidak Ada Tagihan</span>
+        <span>No Transactions</span>
       </div>
     </div>
     <!-- No Bill -->
@@ -178,7 +178,7 @@
     <div class="history-payment container shadow-sm mb-4 p-3 bg-white hide">
       <div class="row p-3">
         <div class="col">
-          <b class="history-payment-title">History Payment</b>
+          <b class="history-payment-title">Payment History</b>
         </div>
       </div>
 
@@ -193,13 +193,13 @@
     
           <div class="row pl-4">
             <div class="col">
-              <b>No. Referensi :</b><span> 000</span>
+              <b>Reference Code :</b><span> 000</span>
             </div>
           </div>
     
           <div class="row pl-4 pt-2 detail-payment-min">
             <div class="col">
-              <span>Pembayaran</span>
+              <span>Payment</span>
             </div>
     
             <div class="col d-flex justify-content-end pr-5">
@@ -219,7 +219,7 @@
     
           <div class="row pl-4">
             <div class="col">
-              <b>No. Referensi :</b><span> 000</span>
+              <b>Reference Code :</b><span> 000</span>
             </div>
           </div>
     
@@ -243,7 +243,7 @@
       <div class="container border-0 shadow-sm mb-4 bg-white p-3">
         <div class="row pl-3 pt-3">
           <div class="col">
-            <b>Pilih Nominal Top Up</b>
+            <b>Select a top-up amount</b>
           </div>
         </div>
   
@@ -259,14 +259,14 @@
   
         <div class="row p-3">
           <div class="col">
-            <p>Atau masukkan nominal top up di sini</p>
-            <input class="pl-3 pt-2 pb-2" id ="input-saldo" type="text" placeholder="Minimal Rp 10.000">
+            <p>Or enter the top-up amount here</p>
+            <input class="pl-3 pt-2 pb-2" id ="input-saldo" type="text" placeholder="Minimun Rp 10.000">
           </div>
         </div>
   
         <div class="row pl-3">
           <div class="col">
-            <p class="min-nominal hide">Minimal Top Up Rp. 10.000</p>
+            <p class="min-nominal hide">Minimum top-up amount is Rp 10.000.</p>
           </div>
         </div>
       </div>
@@ -275,13 +275,13 @@
       <div class="container border-0 shadow-sm mb-4 bg-white p-3">
         <div class="row p-3">
           <div class="col">
-            <b>Metode Pembayaran</b>
+            <b>Payment Methods</b>
           </div>
         </div>
   
         <div class="row p-3">
           <div class="col d-flex">
-            <button class="methodPay btn mr-1 btn-warning" id="debit" type="button" data-toggle="modal" data-target="#debitModal">Kartu Debit</button>
+            <button class="methodPay btn mr-1 btn-warning" id="debit" type="button" data-toggle="modal" data-target="#debitModal">Debit Card</button>
 
             <button class="methodPay btn mr-1 btn-warning" id="atm" type="button">ATM</button>
 
@@ -304,35 +304,35 @@
 
       <div class="row pb-2">
         <div class="col">
-          <b>Instruksi :</b>
+          <b>Instructions :</b>
         </div>
       </div>
 
       <div class="row mb-4">
         <div class="col">
           <ul>
-            <li>Masukkan kartu ATM dan PIN Anda</li>
-            <li>Pilih menu <b>Transaksi Lainnya</b></li>
-            <li>Pilih menu <b>Transfer</b></li>
-            <li>Pilih menu <b>Virtual Account</b></li>
-            <li>Masukkan 12345 + nomor ponsel Anda: <b>12345 08xx-xxxx-xxxx</b></li>
-            <li>Masukkan <b>Nominal Top Up</b></li>
-            <li>Ikuti instruksi untuk menyelesaikan transaksi</li>
+            <li>Insert your ATM card and enter your PIN</li>
+            <li>Select <b>Other Transactions</b></li>
+            <li>Select <b>Transfer</b></li>
+            <li>Select <b>Virtual Account</b></li>
+            <li>Enter <b>12345</b> followed by your mobile number : <b>(e.g. 12345 08xx-xxxx-xxxx)</b></li>
+            <li>Enter <b>Top-up amount</b></li>
+            <li>Follow the instructions to complete the transaction</li>
           </ul>
         </div>
       </div>
 
       <div class="row footnote">
         <div class="col">
-          <span><i>Catatan :</i></span>
+          <span><i>Notes :</i></span>
         </div>
       </div>
 
       <div class="row footnote">
         <div class="col">
           <ul>
-            <li><i>Minimum top-up Rp 20.000</i></li>
-            <li><i>Biaya top-up Rp 1.000</i></li>
+            <li><i>Minimum top-up amount is Rp 10.000</i></li>
+            <li><i>Top-up fee Rp 1.000</i></li>
           </ul>
         </div>
       </div>
@@ -356,34 +356,34 @@
               <div class="container mt-4 mbank-collapse hide">
                 <div class="row pb-2">
                   <div class="col">
-                    <b>Instruksi :</b>
+                    <b>Instructions :</b>
                   </div>
                 </div>
           
                 <div class="row mb-4">
                   <div class="col">
                     <ul>
-                      <li>Login ke akun <b>Mobile Banking</b> Anda</li>
-                      <li>Pilih menu <b>Transfer</b></li>
-                      <li>Pilih <b>Virtual Account</b></li>
-                      <li>Masukkan 12345 + nomor ponsel Anda: <b>12345 08xx-xxxx-xxxx</b></li>
-                      <li>Masukkan <b>Nominal Top Up</b></li>
-                      <li>Ikuti instruksi untuk menyelesaikan transaksi</li>
+                      <li>Login to your <b>Mobile Banking</b> account</li>
+                      <li>Select <b>Transfer</b></li>
+                      <li>Select <b>Virtual Account</b></li>
+                      <li>Enter <b>12345</b> followed by your mobile number : <b>(e.g. 12345 08xx-xxxx-xxxx)</b></li>
+                      <li>Enter <b>Top-up amount</b></li>
+                      <li>Follow the instructions to complete the transaction</li>
                     </ul>
                   </div>
                 </div>
           
                 <div class="row footnote">
                   <div class="col">
-                    <span><i>Catatan :</i></span>
+                    <span><i>Notes :</i></span>
                   </div>
                 </div>
           
                 <div class="row footnote">
                   <div class="col">
                     <ul>
-                      <li><i>Minimum top-up Rp 20.000</i></li>
-                      <li><i>Biaya top-up Rp 1.000</i></li>
+                      <li><i>Minimum top-up amount is Rp 10.000</i></li>
+                      <li><i>Top-up fee Rp 1.000</i></li>
                     </ul>
                   </div>
                 </div>
@@ -397,34 +397,34 @@
               <div class="container mt-4 internet-collapse hide">
                 <div class="row pb-2">
                   <div class="col">
-                    <b>Instruksi :</b>
+                    <b>Instructions :</b>
                   </div>
                 </div>
           
                 <div class="row mb-4">
                   <div class="col">
                     <ul>
-                      <li>Login ke akun <b>Internet Banking</b> Anda</li>
-                      <li>Pilih menu <b>Transfer Dana</b></li>
-                      <li>Pilih <b>Virtual Account</b></li>
-                      <li>Masukkan 12345 + nomor ponsel Anda: <b>12345 08xx-xxxx-xxxx</b></li>
-                      <li>Masukkan <b>Nominal Top Up</b></li>
-                      <li>Ikuti instruksi untuk menyelesaikan transaksi</li>
+                      <li>Login to your <b>Internet Banking</b> account</li>
+                      <li>Select <b>Transfer</b></li>
+                      <li>Select <b>Virtual Account</b></li>
+                      <li>Enter <b>12345</b> followed by your mobile number : <b>(e.g. 12345 08xx-xxxx-xxxx)</b></li>
+                      <li>Enter <b>Top-up amount</b></li>
+                      <li>Follow the instructions to complete the transaction</li>
                     </ul>
                   </div>
                 </div>
           
                 <div class="row footnote">
                   <div class="col">
-                    <span><i>Catatan :</i></span>
+                    <span><i>Notes :</i></span>
                   </div>
                 </div>
           
                 <div class="row footnote">
                   <div class="col">
                     <ul>
-                      <li><i>Minimum top-up Rp 20.000</i></li>
-                      <li><i>Biaya top-up Rp 1.000</i></li>
+                      <li><i>Minimum top-up amount is Rp 10.000</i></li>
+                      <li><i>Top-up fee Rp 1.000</i></li>
                     </ul>
                   </div>
                 </div>
@@ -448,7 +448,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <i class="fa fa-check-circle"></i>
-            <p><b>Pembayaran Berhasil!</b></p>
+            <p><b>Your Payment Was Successful!</b></p>
           </div>
         </div>
       </div>
@@ -464,7 +464,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
             <i class="fa fa-check-circle"></i>
-            <p><b>Pembayaran Berhasil!</b></p>
+            <p><b>Transaction Completed Successful!</b></p>
           </div>
         </div>
       </div>
@@ -488,21 +488,21 @@
 
               <div class="row">
                 <div class="col-md title">
-                  <b>Kartu Debit</b>
+                  <b>Debit Card</b>
                   <hr>
                 </div>
               </div>
               
               <div class="row pb-3">
                 <div class="col-md">
-                  <label for="nameCard"><b>Nama pemilik kartu</b></label><br>
+                  <label for="nameCard"><b>Name on Card</b></label><br>
                   <input class="long-input" type="text" name="nameCard" autocomplete="off" size="34" required>
                 </div>
               </div>
 
               <div class="row pb-3">
                 <div class="col-md">
-                  <label for="cardNumber"><b>Nomor kartu</b></label><br>
+                  <label for="cardNumber"><b>Card Number</b></label><br>
                   <input class="long-input" type="text" name="cardNumber" autocomplete="off" size="34" required>
                 </div>
               </div>
@@ -513,21 +513,21 @@
                 </div>
 
                 <div class="col">
-                  <label for="masa"><b>Masa Berlaku</b></label>
+                  <label for="masa"><b>Expiry Date</b></label>
                 </div>
               </div>
 
               <div class="row pb-3">
                 <div class="col">
-                  <input class="short-input" type="text" name="cvc" placeholder="cth.311" autocomplete="off" size="3" required>
+                  <input class="short-input" type="text" name="cvc" placeholder="ex. 311" autocomplete="off" size="3" required>
                 </div>
 
                 <div class="col">
-                  <input class="short-input" type="text" name="masa" placeholder="Bulan" autocomplete="off" size="5" required>
+                  <input class="short-input" type="text" name="masa" placeholder="MM" autocomplete="off" size="5" required>
                 </div>
 
                 <div class="col d-flex justify-content-start">
-                  <input class="short-input" type="text" name="masa" placeholder="Tahun" autocomplete="off" size="5" required>
+                  <input class="short-input" type="text" name="masa" placeholder="YY" autocomplete="off" size="5" required>
                 </div>
               </div>
 
