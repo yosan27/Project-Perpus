@@ -26,6 +26,8 @@
 
   <!-- Data Tables -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.bootstrap4.min.css">
 
   <link rel="stylesheet" href="assets/css/layout.css">
 </head>
@@ -239,189 +241,350 @@
         <!-- history table -->
         <div class="container">
           <div class="table-responsive">
-            <table id="history" class="table table-striped table-bordered">
+            <table id="history" class="table table-striped table-bordered nowrap" style="width:100%">
               <thead class="thead-dark">
                 <tr>
                   <th>Transaction ID</th>
-                  <th>Book Title</th>
+                  <th>Action</th>
                   <th>Borrower Name</th>
+                  <th>Book Title</th>
                   <th>Date Borrowed</th>
                   <th>Due Date</th>
                   <th>Date Returned</th>
                   <th>Status</th>
-                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>202010052078</td>
-                  <td>Unbranding</td>
-                  <td>John Elder</td>
-                  <td>2020/10/05</td>
-                  <td>2020/10/11</td>
-                  <td>2020/10/09</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>John Elder</td>
+                  <td>Unbranding</td>
+                  <td>10/05/2020</td>
+                  <td>10/11/2020</td>
+                  <td>10/09/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010062201</td>
-                  <td>Koala Kumal</td>
-                  <td>Fiona Green</td>
-                  <td>2020/10/06</td>
-                  <td>2020/10/12</td>
-                  <td>2020/10/12</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Fiona Green</td>
+                  <td>Koala Kumal</td>
+                  <td>10/06/2020</td>
+                  <td>10/12/2020</td>
+                  <td>10/12/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010062219</td>
-                  <td>Filosofi Teras</td>
-                  <td>Jane Gaines</td>
-                  <td>2020/10/06</td>
-                  <td>2020/10/12</td>
-                  <td>2020/10/15</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Jane Gaines</td>
+                  <td>Filosofi Teras</td>
+                  <td>10/06/2020</td>
+                  <td>10/12/2020</td>
+                  <td>10/15/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010072324</td>
-                  <td>Milea: Suara dari Dilan</td>
-                  <td>Mary Soccer</td>
-                  <td>2020/10/07</td>
-                  <td>2020/10/13</td>
-                  <td>2020/10/13</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Mary Soccer</td>
+                  <td>Milea: Suara dari Dilan</td>
+                  <td>10/07/2020</td>
+                  <td>10/13/2020</td>
+                  <td>10/13/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010082453</td>
-                  <td>Laut Bercerita</td>
-                  <td>John Elder</td>
-                  <td>2020/10/08</td>
-                  <td>2020/10/14</td>
-                  <td>2020/10/14</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>John Elder</td>
+                  <td>Laut Bercerita</td>
+                  <td>10/08/2020</td>
+                  <td>10/14/2020</td>
+                  <td>10/14/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010122921</td>
-                  <td>Nanti Kita Cerita Tentang Hari Ini</td>
-                  <td>June Watanabe</td>
-                  <td>2020/10/12</td>
-                  <td>2020/10/18</td>
-                  <td>2020/10/20</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>June Watanabe</td>
+                  <td>Nanti Kita Cerita Tentang Hari Ini</td>
+                  <td>10/12/2020</td>
+                  <td>10/18/2020</td>
+                  <td>10/20/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 
                 <tr>
                   <td>202010122934</td>
-                  <td>Laut Bercerita</td>
-                  <td>Martha Stewart</td>
-                  <td>2020/10/12</td>
-                  <td>2020/10/18</td>
-                  <td>2020/10/16</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Martha Stewart</td>
+                  <td>Laut Bercerita</td>
+                  <td>10/12/2020</td>
+                  <td>10/18/2020</td>
+                  <td>10/16/2020</td>
+                  <td><span class="badge badge-success">Returned</span></td>
                 </tr>
                 <tr>
                   <td>202010122946</td>
-                  <td>Pulang</td>
-                  <td>Martha Stewart</td>
-                  <td>2020/10/12</td>
-                  <td>2020/10/18</td>
-                  <td>2020/10/16</td>
-                  <td class="table-success">Returned</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend" disabled>Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return" disabled>Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm disabled" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm disabled" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Martha Stewart</td>
+                  <td>Pulang</td>
+                  <td>10/12/2020</td>
+                  <td>10/18/2020</td>
+                  <td>10/20/2020</td>
+                  <td><span class="badge badge-info">Waiting for Payment</span></td>
                 </tr>
                 <tr>
                   <td>202010234187</td>
-                  <td>Hujan</td>
-                  <td>July August</td>
-                  <td>2020/10/23</td>
-                  <td>2020/11/05</td>
-                  <td></td>
-                  <td class="table-danger">Overdue</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend">Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return">Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>July August</td>
+                  <td>Hujan</td>
+                  <td>10/23/2020</td>
+                  <td>11/05/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-danger">Overdue</span></td>
                 </tr>
                 <tr>
                   <td>202010284763</td>
-                  <td>The Book You Wish Your Parents Had Read</td>
-                  <td>Fiona Green</td>
-                  <td>2020/10/28</td>
-                  <td>2020/10/11</td>
-                  <td></td>
-                  <td class="table-danger">Overdue</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend">Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return">Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Fiona Green</td>
+                  <td>The Book You Wish Your Parents Had Read</td>
+                  <td>10/28/2020</td>
+                  <td>10/11/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-danger">Overdue</span></td>
                 </tr>
                 <tr>
                   <td>202011097654</td>
-                  <td>Book of Invisible Question</td>
-                  <td>Mary Soccer</td>
-                  <td>2020/11/09</td>
-                  <td>2020/11/22</td>
-                  <td></td>
-                  <td class="table-warning">Borrowed</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend">Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return">Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Mary Soccer</td>
+                  <td>Book of Invisible Question</td>
+                  <td>11/09/2020</td>
+                  <td>11/22/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
                 </tr>
                 <tr>
                   <td>202011107710</td>
-                  <td>The Book You Wish Your Parents Had Read</td>
-                  <td>Mary Soccer</td>
-                  <td>2020/11/10</td>
-                  <td>2020/11/23</td>
-                  <td></td>
-                  <td class="table-warning">Borrowed</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend">Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return">Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Mary Soccer</td>
+                  <td>The Book You Wish Your Parents Had Read</td>
+                  <td>11/10/2020</td>
+                  <td>11/23/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
                 </tr>
                 <tr>
                   <td>202011168109</td>
-                  <td>The Things You Can See Only When You Slow Down</td>
-                  <td>Angelica Smith</td>
-                  <td>2020/11/16</td>
-                  <td>2020/11/22</td>
-                  <td></td>
-                  <td class="table-warning">Borrowed</td>
                   <td>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#extend">Extend</button>
-                    <button class="btn btn-outline-dark btn-sm" data-toggle="modal" data-target="#return">Return</button>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
                   </td>
+                  <td>Angelica Smith</td>
+                  <td>The Things You Can See Only When You Slow Down</td>
+                  <td>11/16/2020</td>
+                  <td>11/22/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
+                </tr>
+                <tr>
+                  <td>202011198732</td>
+                  <td>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
+                  </td>
+                  <td>Devina Claire</td>
+                  <td>Sapiens</td>
+                  <td>11/19/2020</td>
+                  <td>11/25/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
+                </tr>
+                <tr>
+                  <td>202011198765</td>
+                  <td>
+                    <span data-toggle="modal" data-target="#info">
+                      <button class="btn btn-primary btn-sm" data-toggle="tooltip" title="Info">
+                        <i class="fa fa-info-circle"></i>
+                      </button>
+                    </span>
+                    <a class="btn btn-primary btn-sm" href="extendForm.html" role="button" data-toggle="tooltip" title="Extend">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" href="returnForm.html" role="button" data-toggle="tooltip" title="Return">
+                      <i class="fa fa-exchange"></i>
+                    </a>
+                  </td>
+                  <td>Rey Frank</td>
+                  <td>Educated</td>
+                  <td>11/19/2020</td>
+                  <td>11/25/2020</td>
+                  <td></td>
+                  <td><span class="badge badge-warning">Borrowed</span></td>
                 </tr>
               </tbody>
             </table>
@@ -429,12 +592,12 @@
         </div>
         <!-- /history table -->
 
-        <!-- modal extend -->
-        <div class="modal fade" id="extend" tabindex="-1" aria-labelledby="extendLabel" aria-hidden="true">
+        <!-- modal info -->
+        <div class="modal fade" id="info" tabindex="-1" aria-labelledby="infoLabel" aria-hidden="true">
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="extendLabel">Extension Form</h5>
+                <h5 class="modal-title" id="infoLabel">Info</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -442,124 +605,101 @@
               <div class="modal-body">
                 <form>
                   <div class="form-group row">
-                    <label for="transactionID" class="col-sm-3 col-form-label">Transaction ID</label>
-                    <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="transactionID" value="202011202011">
-                    </div>
+                      <label for="transactionID" class="col-sm-3 col-form-label">Transaction ID</label>
+                      <div class="col-sm-9">
+                        <input type="text" readonly class="form-control-plaintext" id="transactionID" value="202011202011">
+                      </div>
                   </div>
                   <div class="form-group row">
-                    <label for="bookTitle" class="col-sm-3 col-form-label">Book Title</label>
-                    <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="bookTitle" value="Title">
-                    </div>
+                      <label for="borrowerName" class="col-sm-3 col-form-label">Borrower Name</label>
+                      <div class="col-sm-9">
+                        <input type="text" readonly class="form-control-plaintext" id="borrowerName" value="User">
+                      </div>
                   </div>
                   <div class="form-group row">
-                    <label for="borrowerName" class="col-sm-3 col-form-label">Borrower Name</label>
-                    <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="borrowerName" value="Name">
-                    </div>
+                      <label for="bookTitle" class="col-sm-3 col-form-label">Book Title</label>
+                      <div class="col-sm-9">
+                        <input type="text" readonly class="form-control-plaintext" id="bookTitle" value="Dilan 1990">
+                      </div>
                   </div>
                   <hr>
                   <div class="form-group row">
-                    <label for="dateBorrowed" class="col-sm-3 col-form-label">Date Borrowed</label>
-                    <div class="col-sm-9">
-                      <input type="text" readonly class="form-control-plaintext" id="dateBorrowed" value="mm/dd/yyyy">
-                    </div>
+                      <label for="dateBorrowed" class="col-sm-3 col-form-label">Date Borrowed</label>
+                      <div class="col-sm-4">
+                          <div class="form-group">
+                              <div class="input-group date" id="dateBorrowed">
+                                  <input type="text" class="form-control" value="11/11/2020" disabled/>
+                                  <div class="input-group-append">
+                                      <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
                   </div>
                   <div class="form-group row">
                     <label for="dueDate" class="col-sm-3 col-form-label">Due Date</label>
                     <div class="col-sm-4">
-                      <div class="input-group">
-                        <div class="input-group-append">
-                          <span class="input-group-text">
-                            <i class="fa fa-calendar"></i>
-                          </span>
-                        </div>
-                        <input type="date" class="form-control" id="datepicker" name="datepicker">
+                      <div class="form-group">
+                          <div class="input-group date" id="dueDate">
+                              <input type="text" class="form-control" value="11/18/2020" disabled/>
+                              <div class="input-group-append">
+                                  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                              </div>
+                          </div>
                       </div>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="dateReturned" class="col-sm-3 col-form-label">Date Returned</label>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <div class="input-group date" id="dateReturned">
+                          <input type="text" class="form-control" value="11/20/2020" disabled/>
+                          <div class="input-group-append">
+                              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                          </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="form-group row">
+                    <label for="late" class="col-sm-3 col-form-label">Late</label>
+                    <div class="col-sm-8">
+                      <input type="text" readonly class="form-control-plaintext pb-0" id="late" value="Rp 2.000">
+                      <small class="form-text text-muted pb-2">2 days late</small>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="damage" class="col-sm-3 col-form-label">Damage</label>
+                    <div class="col-sm-8">
+                      <input type="text" readonly class="form-control-plaintext pb-0" id="damage" value="Rp 10.000">
+                      <small class="form-text text-muted pb-2">Torn</small>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="totalfine" class="col-sm-3 col-form-label">Total Fine</label>
+                    <div class="col-sm-8">
+                      <input type="text" readonly class="form-control-plaintext" id="totalfine" value="Rp 12.000">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="status" class="col-sm-3 col-form-label">Status</label>
+                    <div class="col-sm-8">
+                      <span class="badge badge-info">Waiting for Payment</span>
                     </div>
                   </div>
                 </form>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
               </div>
             </div>
           </div>
         </div>
-        <!-- /modal extend-->
+        <!-- /modal info -->
 
-        <!-- modal return -->
-        <div class="modal fade" id="return" tabindex="-1" aria-labelledby="returnLabel" aria-hidden="true">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="returnLabel">Return Form</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <div class="form-group row">
-                    <label for="dateBorrowed" class="col-sm-4 col-form-label">Date Borrowed</label>
-                    <div class="col-sm-8">
-                      <input class="form-control" type="date" id="dateBorrowed">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="dueDate" class="col-sm-4 col-form-label">Due Date</label>
-                    <div class="col-sm-8">
-                      <input class="form-control" type="date" id="dueDate">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="dateReturned" class="col-sm-4 col-form-label">Date Returned</label>
-                    <div class="col-sm-8">
-                      <input class="form-control" type="date" id="dateReturned">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="latefine" class="col-sm-4 col-form-label">Late Fine</label>
-                    <div class="col-sm-8">
-                      <input type="text" readonly class="form-control-plaintext" id="latefine" value="Rp">
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="damage" class="col-sm-4 col-form-label">Damage Fine</label>
-                    <div class="col-sm-8">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="foldedCheck">
-                        <label class="form-check-label" for="foldedCheck">Folded (Rp 1.000)</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="tornCheck">
-                        <label class="form-check-label" for="tornCheck">Torn (Rp 10.000)</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="lostCheck">
-                        <label class="form-check-label" for="lostCheck">Lost (Rp 100.000)</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="form-group row">
-                    <label for="totalfine" class="col-sm-4 col-form-label">Total Fine</label>
-                    <div class="col-sm-8">
-                      <input type="text" readonly class="form-control-plaintext" id="totalfine" value="Rp">
-                    </div>
-                  </div>
-                  
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /modal return-->
+        
       </div>
       <!-- /page content -->
 
@@ -629,10 +769,13 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="assets/js/slider2.js"></script>
 
-  <!-- Data Tables -->
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js">
-  </script>
+  <!-- DataTables -->
+  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
+  <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.6/js/responsive.bootstrap.min.js"></script>
   <script src="assets/js/datatable.js"></script>
+
 </body>
 
 </html>

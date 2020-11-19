@@ -1,8 +1,11 @@
 $(document).ready(function() {
-    $('#history').dataTable( {
-        "pagingType": "full_numbers"
-      } );
+  var table = $('#history').DataTable( {
+      responsive: true
+  } );
+
+  new $.fn.dataTable.FixedHeader( table );
 } );
+
 
 $(document).ready(function() {
   $('#collections').dataTable( {
