@@ -74,13 +74,13 @@
                                 <li><a href="historyUser.html"><i class="fa fa-history"></i> History</a></li>
                                 <li><a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a></li>
                                 <li>
-                                <a>
-                                    <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
-                                </a>
-                                <ul class="nav child_menu">
-                                    <li><a href="cart.html">Cart</a></li>
-                                    <li><a href="wishlist.html">Wishlist</a></li>
-                                </ul>
+                                    <a>
+                                        <i class="fa fa-edit"></i> Rent <span class="fa fa-chevron-down"></span>
+                                    </a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="cart.html">Cart</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                    </ul>
                                 </li>
                                 <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
                                 <li><a href="donasiUser.html"><i class="fa fa-gift"></i> Donation</a></li>
@@ -151,24 +151,25 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item" style="padding-left: 15px;">
-                          <a href="cart.html" class="nav-link" style="color:#495464 !important;">
-                            <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
-                            <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
-                          </a>
+                            <a href="cart.html" class="nav-link" style="color:#495464 !important;">
+                                <i class="fa fa-shopping-cart fa-lg" style="font-size:17px"></i>
+                                <span id="cartCount" class="badge badge-danger navbar-badge">2</span>
+                            </a>
                         </li>
                         <li class="nav-item" style="padding-left: 15px;">
-                          <form class="form-inline pt-2">
-                            <div class="input-group input-group-sm">
-                              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search"
-                                style="background-color: white;border: 0; border-top-left-radius: 25px; border-bottom-left-radius: 25px;">
-                              <div class="input-group-append">
-                                <button class="btn btn-navbar m-0" type="submit"
-                                  style="background-color: white;border: 0; border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
-                                  <i class="fa fa-search pr-2"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </form>
+                            <form class="form-inline pt-2">
+                                <div class="input-group input-group-sm">
+                                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                                        aria-label="Search"
+                                        style="background-color: white;border: 0; border-top-left-radius: 25px; border-bottom-left-radius: 25px;">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-navbar m-0" type="submit"
+                                            style="background-color: white;border: 0; border-top-right-radius: 25px; border-bottom-right-radius: 25px;">
+                                            <i class="fa fa-search pr-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
                         </li>
                     </ul>
                 </nav>
@@ -191,7 +192,7 @@
                     <div class="row justify-content-md-center">
                         <form>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Judul Buku</label>
+                                <label for="exampleFormControlInput1">Title Book</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Bumi Manusia">
                             </div>
@@ -206,24 +207,24 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Tahun</label>
+                                <label for="exampleFormControlInput1">Year</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="2020">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Penulis</label>
+                                <label for="exampleFormControlInput1">Author</label>
                                 <input type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Pramodya A. Toer">
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Kondisi</label>
+                                <label for="exampleFormControlTextarea1">Condition</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                             </div>
 
                             <div class="form-group">
-                                <label for="exampleFormControlInput1">Foto Fisik</label>
+                                <label for="exampleFormControlInput1">Photo Book</label>
                                 <input class="form-control" type="file" id="avatar" name="avatar"
                                     accept="image/png, image/jpeg">
 
@@ -233,9 +234,27 @@
                     <br /><br />
                     <div class="row justify-content-md-center">
                         <div class="col-lg-2">
-                            <button type="button" class="btn btn-outline-info">Submit</button>
+                            <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                                data-target="#deleteSuccessModal" data-dismiss="modal">Submit</button>
                         </div>
                     </div>
+
+                    <!-- Modal verify success -->
+                    <div class="modal fade" id="deleteSuccessModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-body text-center">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <i class="fa fa-check-circle mb-2" style="color:green; font-size: 15vh;"></i>
+                                    <p>Buku donasi berhasil diterima!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal delete success -->
 
                 </div>
                 <!-- /tabel histori -->
