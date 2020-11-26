@@ -1,558 +1,1009 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="icon" href="assets/images/1.png" type="image/ico" />
+    <title>Faraday E-Library | Sistem Peminjaman Buku</title>
 
+    <!-- Bootstrap -->
+    <link
+      href="vendors/bootstrap/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Font Awesome -->
-    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="assets/css/payment.css">
-
-    <title>Faraday E-Library | Payment</title>
+    <link
+      href="vendors/font-awesome/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <!-- Slider Style -->
+    <link href="assets/css/styleSlider.css" rel="stylesheet" />
+    <!-- Custom Theme Style -->
+    <link href="assets/css/custom.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/cart.css" />
+    <link rel="stylesheet" href="assets/css/layout.css" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/payment.css" />
   </head>
-  <body>
-    <!-- Header -->
-    <div class="header-payment pt-2 pl-4">
-      <div class="row">
-        <div class="col">
-          <a href="indexUser.html"><i class="fa fa-arrow-circle-left"></i></a>
-        </div>
 
-        <div class="col d-flex justify-content-end">
-          <i class="fa fa-credit-card pt-1 pr-2"></i>
-          <i class="fa fa-cc-paypal pt-1 pr-2"></i>
-          <i class="fa fa-cc-visa pt-1 pr-2"></i>
-          <i class="fa fa-cc-mastercard pt-1 pr-5"></i>
-        </div>
-      </div>
-    </div>
-    <!-- Header -->
-
-    <!-- Logo Bar -->
-    <div class="header-logo-bar shadow p-3 mb-4 bg-white">
-      <div class="row">
-        <div class="logo col d-flex justify-content-start pr-5">
-          <ul>
-            <li><img src="assets/images/1.png" alt=""></li>
-            <li><h4>Farday E-Library | Payment</h4></li>
-          </ul>
-        </div>
-
-        <div class="top-up col d-flex justify-content-end pr-5">
-          <p class="pr-1">Rp</p>
-          <span class="pr-3 saldo"></span>
-          <i class="fa fa-history pr-3" id="history-btn"></i>
-          <button class="btn btn-success" id="topUP" type="submit">Top Up</button>
-          
-        </div>
-      </div>
-    </div>
-    <!-- Logo Bar -->
-
-    <!-- List -->
-    <div class="list-box container mb-4">
-      
-      <div class="row list-header pl-4 pb-2 pt-2 border-bottom border-secondary">
-        <div class="col ml-4">
-          Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Details
-        </div>
-
-        <div class="col d-flex justify-content-end pr-5">
-          Fine
-        </div>
-      </div>
-
-      <div class="row list-1 pl-5 pb-3 pt-3 border-bottom border-secondary bg-white">
-        <div class="col">
-          1. Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Late
-        </div>
-
-        <div class="denda col d-flex justify-content-end pr-5">
-        </div>
-      </div>
-      
-      <div class="row list-2 pl-5 pb-3 pt-3 border-bottom border-secondary bg-white">
-        <div class="col">
-          2. Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Late
-        </div>
-
-        <div class="denda col d-flex justify-content-end pr-5">
-        </div>
-      </div>
-
-      <div class="row list-3 pl-5 pb-3 pt-3 border-bottom border-secondary bg-white">
-        <div class="col">
-          3. Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Late
-        </div>
-
-        <div class="denda col d-flex justify-content-end pr-5">
-        </div>
-      </div>
-
-      <div class="row list-4 pl-5 pb-3 pt-3 border-bottom border-secondary bg-white">
-        <div class="col">
-          4. Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Late
-        </div>
-
-        <div class="denda col d-flex justify-content-end pr-5">
-        </div>
-      </div>
-
-      <div class="row list-5 pl-5 pb-3 pt-3 border-bottom border-secondary bg-white">
-        <div class="col">
-          5. Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Late
-        </div>
-
-        <div class="denda col d-flex justify-content-end pr-5">
-        </div>
-      </div>
-
-      <div class="row list-6 pl-5 pb-3 pt-3 border-bottom border-secondary bg-white">
-        <div class="col">
-          6. Order ID
-        </div>
-
-        <div class="col d-flex justify-content-center">
-          Late
-        </div>
-
-        <div class="denda col d-flex justify-content-end pr-5">
-        </div>
-      </div>
-
-      <div class="row list-total pl-5 pb-2 pt-2 border-bottom border-secondary">
-            <div class="col">
-              <button class="btn btn-success" id="pay" type="button" data-toggle="modal" data-target="#payModal">Pay</button>
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0">
+              <a href="indexUser.html" class="site_title">
+                <img src="assets/images/1.png" alt="" />
+                <span>Faraday E-Library</span>
+              </a>
             </div>
 
-            <div class="col d-flex justify-content-center mr-2">
-              Total 
-            </div>
-    
-            <div class="total col d-flex justify-content-end mr-4 pr-3">
-            </div>
-      </div>
-    </div>
-    <!-- List -->
+            <div class="clearfix"></div>
 
-    <!-- No Bill -->
-    <div class="container d-flex justify-content-center">
-      <div class="hide p-5" id="no-bill">
-        <span>No Transactions</span>
-      </div>
-    </div>
-    <!-- No Bill -->
-
-    <!-- History Payment -->
-    <div class="history-payment container shadow-sm mb-4 p-3 bg-white hide">
-      <div class="row p-3">
-        <div class="col">
-          <b class="history-payment-title">Payment History</b>
-        </div>
-      </div>
-
-      <!-- Payment List-->
-      <div class="row">
-        <div class="col">
-          <div class="row payment-date m-3 pb-1 pt-1">
-            <div class="col">
-              17 Nov 2020
-            </div>
-          </div>
-    
-          <div class="row pl-4">
-            <div class="col">
-              <b>Reference Code :</b><span> 000</span>
-            </div>
-          </div>
-    
-          <div class="row pl-4 pt-2 detail-payment-min">
-            <div class="col">
-              <span>Payment</span>
-            </div>
-    
-            <div class="col d-flex justify-content-end pr-5">
-              <span>-Rp<span>20.000</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col">
-          <div class="row payment-date m-3 pb-1 pt-1">
-            <div class="col">
-              16 Nov 2020
-            </div>
-          </div>
-    
-          <div class="row pl-4">
-            <div class="col">
-              <b>Reference Code :</b><span> 000</span>
-            </div>
-          </div>
-    
-          <div class="row pl-4 pt-2 detail-payment-plus">
-            <div class="col">
-              <span>Top Up</span>
-            </div>
-    
-            <div class="col d-flex justify-content-end pr-5">
-              <span>+Rp<span>120.000</span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Payment List-->
-    </div>
-    <!-- History Payment -->
-
-    <!-- Top Up Box -->
-    <div class="top-up-box hide">
-      <div class="container border-0 shadow-sm mb-4 bg-white p-3">
-        <div class="row pl-3 pt-3">
-          <div class="col">
-            <b>Select a top-up amount</b>
-          </div>
-        </div>
-  
-        <div class="row p-3">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary mt-2" id="10000">10000</button>
-            <button type="button" class="btn btn-outline-secondary mt-2" id="25000">25000</button>
-            <button type="button" class="btn btn-outline-secondary mt-2" id="50000">50000</button>
-            <button type="button" class="btn btn-outline-secondary mt-2" id="75000">75000</button>
-            <button type="button" class="btn btn-outline-secondary mt-2" id="100000">100000</button>
-          </div>
-        </div>
-  
-        <div class="row p-3">
-          <div class="col">
-            <p>Or enter the top-up amount here</p>
-            <input class="pl-3 pt-2 pb-2" id ="input-saldo" type="text" placeholder="Minimun Rp 10.000">
-          </div>
-        </div>
-  
-        <div class="row pl-3">
-          <div class="col">
-            <p class="min-nominal hide">Minimum top-up amount is Rp 10.000.</p>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Payment Method -->
-      <div class="container border-0 shadow-sm mb-4 bg-white p-3">
-        <div class="row p-3">
-          <div class="col">
-            <b>Payment Methods</b>
-          </div>
-        </div>
-  
-        <div class="row p-3">
-          <div class="col d-flex">
-            <button class="methodPay btn mr-1 btn-warning" id="debit" type="button" data-toggle="modal" data-target="#debitModal">Debit Card</button>
-
-            <button class="methodPay btn mr-1 btn-warning" id="atm" type="button">ATM</button>
-
-            <button class="methodPay btn mr-1 btn-warning" id="mbank" type="button">Internet/Mobile Banking</button>
-          </div>
-        </div>
-        <!-- Payment Method -->
-      </div>
-      <!-- Payment Method -->
-    </div>
-    <!-- Top Up Box -->
-
-    <!-- ATM -->
-    <div class="atm-box container shadow-sm mb-4 p-5 bg-white hide">
-      <div class="method-title row mb-4">
-        <div class="col">
-          ATM
-        </div>
-      </div>
-
-      <div class="row pb-2">
-        <div class="col">
-          <b>Instructions :</b>
-        </div>
-      </div>
-
-      <div class="row mb-4">
-        <div class="col">
-          <ul>
-            <li>Insert your ATM card and enter your PIN</li>
-            <li>Select <b>Other Transactions</b></li>
-            <li>Select <b>Transfer</b></li>
-            <li>Select <b>Virtual Account</b></li>
-            <li>Enter <b>12345</b> followed by your mobile number : <b>(e.g. 12345 08xx-xxxx-xxxx)</b></li>
-            <li>Enter <b>Top-up amount</b></li>
-            <li>Follow the instructions to complete the transaction</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row footnote">
-        <div class="col">
-          <span><i>Notes :</i></span>
-        </div>
-      </div>
-
-      <div class="row footnote">
-        <div class="col">
-          <ul>
-            <li><i>Minimum top-up amount is Rp 10.000</i></li>
-            <li><i>Top-up fee Rp 1.000</i></li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-    <!-- ATM -->
-
-    <!-- Mbank -->
-    <div class="mbank-box container shadow-sm mb-4 p-5 bg-white hide">
-      <div class="method-title row mb-4">
-        <div class="col">
-          Internet / Mobile Banking
-        </div>
-      </div>
-
-      <div class="row mb-5">
-        <div class="col">
-          <div class="row mb-4">
-            <div class="con">
-              <span id="mbank-btn"><i class="fa fa-plus" id="icon1"></i><b class="pl-2">Mobile Banking</b></span>
-              <div class="container mt-4 mbank-collapse hide">
-                <div class="row pb-2">
-                  <div class="col">
-                    <b>Instructions :</b>
-                  </div>
-                </div>
-          
-                <div class="row mb-4">
-                  <div class="col">
-                    <ul>
-                      <li>Login to your <b>Mobile Banking</b> account</li>
-                      <li>Select <b>Transfer</b></li>
-                      <li>Select <b>Virtual Account</b></li>
-                      <li>Enter <b>12345</b> followed by your mobile number : <b>(e.g. 12345 08xx-xxxx-xxxx)</b></li>
-                      <li>Enter <b>Top-up amount</b></li>
-                      <li>Follow the instructions to complete the transaction</li>
-                    </ul>
-                  </div>
-                </div>
-          
-                <div class="row footnote">
-                  <div class="col">
-                    <span><i>Notes :</i></span>
-                  </div>
-                </div>
-          
-                <div class="row footnote">
-                  <div class="col">
-                    <ul>
-                      <li><i>Minimum top-up amount is Rp 10.000</i></li>
-                      <li><i>Top-up fee Rp 1.000</i></li>
-                    </ul>
-                  </div>
-                </div>
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img
+                  src="assets/images/user.png"
+                  alt="..."
+                  class="img-circle profile_img"
+                />
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>User</h2>
               </div>
             </div>
-          </div>
+            <div class="profile_name">
+              <h4>User</h4>
+            </div>
+            <!-- /menu profile quick info -->
 
-          <div class="row">
-            <div class="con">
-              <span id="internet-btn"><i class="fa fa-plus" id="icon2"></i><b class="pl-2">Internet Banking</b></span>
-              <div class="container mt-4 internet-collapse hide">
-                <div class="row pb-2">
-                  <div class="col">
-                    <b>Instructions :</b>
-                  </div>
-                </div>
-          
-                <div class="row mb-4">
-                  <div class="col">
-                    <ul>
-                      <li>Login to your <b>Internet Banking</b> account</li>
-                      <li>Select <b>Transfer</b></li>
-                      <li>Select <b>Virtual Account</b></li>
-                      <li>Enter <b>12345</b> followed by your mobile number : <b>(e.g. 12345 08xx-xxxx-xxxx)</b></li>
-                      <li>Enter <b>Top-up amount</b></li>
-                      <li>Follow the instructions to complete the transaction</li>
+            <br />
+
+            <!-- sidebar menu -->
+            <div
+              id="sidebar-menu"
+              class="main_menu_side hidden-print main_menu"
+            >
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li>
+                    <a href="profileUser.html"
+                      ><i class="fa fa-user"></i> Profile</a
+                    >
+                  </li>
+                </ul>
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li>
+                    <a href="indexUser.html"
+                      ><i class="fa fa-book"></i> Explore</a
+                    >
+                  </li>
+                  <li>
+                    <a href="historyUser.html"
+                      ><i class="fa fa-history"></i> History</a
+                    >
+                  </li>
+                  <li>
+                    <a href="catalog.html"><i class="fa fa-plus"></i>Catalog</a>
+                  </li>
+                  <li>
+                    <a>
+                      <i class="fa fa-edit"></i> Rent
+                      <span class="fa fa-chevron-down"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li><a href="cart.html">Cart</a></li>
+                      <li><a href="wishlist.html">Wishlist</a></li>
                     </ul>
-                  </div>
-                </div>
-          
-                <div class="row footnote">
-                  <div class="col">
-                    <span><i>Notes :</i></span>
-                  </div>
-                </div>
-          
-                <div class="row footnote">
-                  <div class="col">
-                    <ul>
-                      <li><i>Minimum top-up amount is Rp 10.000</i></li>
-                      <li><i>Top-up fee Rp 1.000</i></li>
-                    </ul>
-                  </div>
-                </div>
+                  </li>
+                  <li>
+                    <a href="payment.html"
+                      ><i class="fa fa-money"></i> Payment</a
+                    >
+                  </li>
+                  <li>
+                    <a href="donasiUser.html"
+                      ><i class="fa fa-gift"></i> Donation</a
+                    >
+                  </li>
+                </ul>
               </div>
             </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small d-flex flex-row">
+              <a
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Logout"
+                href="login.html"
+              >
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+              <!-- <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a> -->
+            </div>
+            <!-- /menu footer buttons -->
           </div>
         </div>
-      </div>
 
-      
-
-    </div>
-    <!-- Mbank -->
-
-    <!-- Pay Modal -->
-    <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="payModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <i class="fa fa-check-circle"></i>
-            <p><b>Your Payment Was Successful!</b></p>
-          </div>
+        <!-- top navigation -->
+        <div class="top_nav">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand navbar-dark nav_menu shadow">
+            <ul class="navbar-nav">
+              <li class="nav-item pr-3">
+                <a id="menu_toggle" style="color: #495464 !important"
+                  ><i class="fa fa-bars"></i
+                ></a>
+              </li>
+              <li class="nav-item dropdown open">
+                <a
+                  href="javascript:;"
+                  class="dropdown-toggle info-number"
+                  id="navbarDropdown2"
+                  data-toggle="dropdown"
+                  aria-expanded="false"
+                  style="color: #495464 !important"
+                >
+                  Categories
+                </a>
+                <ul
+                  class="dropdown-menu list-unstyled msg_list"
+                  role="menu"
+                  aria-labelledby="navbarDropdown2"
+                >
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="message"> Action </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="message"> Novel </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dropdown-item">
+                      <span class="message"> Fiksi </span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="text-center">
+                      <a class="dropdown-item">
+                        <strong>See All Categories</strong>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item" style="padding-left: 15px">
+                <a
+                  href="cart.html"
+                  class="nav-link"
+                  style="color: #495464 !important"
+                >
+                  <i
+                    class="fa fa-shopping-cart fa-lg"
+                    style="font-size: 17px"
+                  ></i>
+                  <span id="cartCount" class="badge badge-danger navbar-badge"
+                    >2</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item" style="padding-left: 15px">
+                <form class="form-inline pt-2">
+                  <div class="input-group input-group-sm">
+                    <input
+                      class="form-control form-control-navbar"
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                      style="
+                        background-color: white;
+                        border: 0;
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                      "
+                    />
+                    <div class="input-group-append">
+                      <button
+                        class="btn btn-navbar m-0"
+                        type="submit"
+                        style="
+                          background-color: white;
+                          border: 0;
+                          border-top-right-radius: 25px;
+                          border-bottom-right-radius: 25px;
+                        "
+                      >
+                        <i class="fa fa-search pr-2"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </li>
+            </ul>
+          </nav>
         </div>
-      </div>
-    </div>
-    <!-- Pay Modal -->
+        <!-- /top navigation -->
 
-    <!-- Pay Debit Modal -->
-    <div class="modal fade" id="payDebitModal" tabindex="-1" aria-labelledby="payDebitModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <i class="fa fa-check-circle"></i>
-            <p><b>Transaction Completed Successful!</b></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Pay Debit Modal -->
-
-    <!-- Debit Modal -->
-    <div class="modal fade" id="debitModal" tabindex="-1" aria-labelledby="debitModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content modal-debit">
-          <div class="modal-body">
+        <!-- page content -->
+        <div class="right_col pb-4" role="main">
+          <section class="mt-5 pt-5">
             <div class="container-fluid">
-
               <div class="row">
-                <div class="col">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-              </div>
+                <div class="col-12 col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <!-- Logo Bar -->
+                      <div class="header-logo-bar shadow p-3 mb-4 bg-white">
+                        <div class="row">
+                          <div
+                            class="logo col d-flex justify-content-start black"
+                          >
+                          <h4><b>Farday E-Library | Payment</b></h4>
+                          </div>
 
-              <div class="row">
-                <div class="col-md title">
-                  <b>Debit Card</b>
-                  <hr>
-                </div>
-              </div>
-              
-              <div class="row pb-3">
-                <div class="col-md">
-                  <label for="nameCard"><b>Name on Card</b></label><br>
-                  <input class="long-input" type="text" name="nameCard" autocomplete="off" required>
-                </div>
-              </div>
+                          <div
+                            class="top-up col d-flex justify-content-end pr-5"
+                          >
+                            <p class="pr-1">Rp</p>
+                            <span class="pr-3 saldo"></span>
+                            <i class="fa fa-history pr-3" id="history-btn"></i>
+                            <button
+                              class="btn btn-success"
+                              id="topUP"
+                              type="submit"
+                            >
+                              Top Up
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Logo Bar -->
+                    </div>
 
-              <div class="row pb-3">
-                <div class="col-md">
-                  <label for="cardNumber"><b>Card Number</b></label><br>
-                  <input class="long-input" type="text" name="cardNumber" autocomplete="off" required>
-                </div>
-              </div>
+                    <div class="card-body">
+                      <!-- List -->
+                      <div class="list-box container mb-4">
+                        <div
+                          class="row list-header pb-2 pt-2 border-bottom border-secondary"
+                        >
+                          <div class="col">Order ID</div>
 
-              <div class="row">
-                <div class="col-4">
-                  <label for="cvc"><b>CVC</b></label>
-                </div>
+                          <div class="col d-flex justify-content-center">
+                            Details
+                          </div>
 
-                <div class="col">
-                  <label for="masa"><b>Expiry Date</b></label>
-                </div>
-              </div>
+                          <div class="col d-flex justify-content-end">Fine</div>
+                        </div>
 
-              <div class="row pb-3">
-                <div class="col">
-                  <input class="short-input" type="text" name="cvc" placeholder="ex. 311" autocomplete="off" size="3" required>
-                </div>
+                        <div
+                          class="row list-1 pb-3 pt-3 border-bottom border-secondary bg-white"
+                        >
+                          <div class="col">1. Order ID</div>
 
-                <div class="col">
-                  <input class="short-input" type="text" name="masa" placeholder="MM" autocomplete="off" size="5" required>
-                </div>
+                          <div class="col d-flex justify-content-center">
+                            Late
+                          </div>
 
-                <div class="col d-flex justify-content-start">
-                  <input class="short-input" type="text" name="masa" placeholder="YY" autocomplete="off" size="5" required>
-                </div>
-              </div>
+                          <div
+                            class="denda col d-flex justify-content-end"
+                          ></div>
+                        </div>
 
-              <div class="row">
-                <div class="total col d-flex align-items-center pl-3 pt-3 pb-3">
-                  Total :<span class="pl-3" id="total-debit">0</span>
-                </div>
+                        <div
+                          class="row list-2 pb-3 pt-3 border-bottom border-secondary bg-white"
+                        >
+                          <div class="col">2. Order ID</div>
 
-                <div class="col d-flex align-items-center justify-content-end">
-                  <button class="btn btn-success" type="button" data-toggle="modal" data-target="#payDebitModal" data-dismiss="modal" id="debit-pay-btn">Pay</button>
+                          <div class="col d-flex justify-content-center">
+                            Late
+                          </div>
+
+                          <div
+                            class="denda col d-flex justify-content-end"
+                          ></div>
+                        </div>
+
+                        <div
+                          class="row list-3 pb-3 pt-3 border-bottom border-secondary bg-white"
+                        >
+                          <div class="col">3. Order ID</div>
+
+                          <div class="col d-flex justify-content-center">
+                            Late
+                          </div>
+
+                          <div
+                            class="denda col d-flex justify-content-end"
+                          ></div>
+                        </div>
+
+                        <div
+                          class="row list-4 pb-3 pt-3 border-bottom border-secondary bg-white"
+                        >
+                          <div class="col">4. Order ID</div>
+
+                          <div class="col d-flex justify-content-center">
+                            Late
+                          </div>
+
+                          <div
+                            class="denda col d-flex justify-content-end"
+                          ></div>
+                        </div>
+
+                        <div
+                          class="row list-5 pb-3 pt-3 border-bottom border-secondary bg-white"
+                        >
+                          <div class="col">5. Order ID</div>
+
+                          <div class="col d-flex justify-content-center">
+                            Late
+                          </div>
+
+                          <div
+                            class="denda col d-flex justify-content-end"
+                          ></div>
+                        </div>
+
+                        <div
+                          class="row list-6 pb-3 pt-3 border-bottom border-secondary bg-white"
+                        >
+                          <div class="col">6. Order ID</div>
+
+                          <div class="col d-flex justify-content-center">
+                            Late
+                          </div>
+
+                          <div
+                            class="denda col d-flex justify-content-end"
+                          ></div>
+                        </div>
+
+                        <div
+                          class="row list-total pb-2 pt-2 border-bottom border-secondary"
+                        >
+                          <div class="col">
+                            <button
+                              class="btn btn-success"
+                              id="pay"
+                              type="button"
+                              data-toggle="modal"
+                              data-target="#payModal"
+                            >
+                              Pay
+                            </button>
+                          </div>
+
+                          <div class="col d-flex justify-content-center">
+                            Total
+                          </div>
+
+                          <div
+                            class="total col d-flex justify-content-end"
+                          ></div>
+                        </div>
+                      </div>
+                      <!-- List -->
+
+                      <!-- No Bill -->
+                      <div class="container d-flex justify-content-center">
+                        <div class="hide p-5" id="no-bill">
+                          <span>No Transactions</span>
+                        </div>
+                      </div>
+                      <!-- No Bill -->
+
+                      <!-- History Payment -->
+                      <div
+                        class="history-payment container shadow-sm mb-4 p-3 bg-white hide"
+                      >
+                        <div class="row p-3">
+                          <div class="col">
+                            <b class="history-payment-title">Payment History</b>
+                          </div>
+                        </div>
+
+                        <!-- Payment List-->
+                        <div class="row">
+                          <div class="col">
+                            <div class="row payment-date m-3 pb-1 pt-1">
+                              <div class="col">17 Nov 2020</div>
+                            </div>
+
+                            <div class="row pl-4">
+                              <div class="col">
+                                <b>Reference Code :</b><span> 000</span>
+                              </div>
+                            </div>
+
+                            <div class="row pl-4 pt-2 detail-payment-min">
+                              <div class="col">
+                                <span>Payment</span>
+                              </div>
+
+                              <div class="col d-flex justify-content-end pr-5">
+                                <span>-Rp<span>20.000</span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col">
+                            <div class="row payment-date m-3 pb-1 pt-1">
+                              <div class="col">16 Nov 2020</div>
+                            </div>
+
+                            <div class="row pl-4">
+                              <div class="col">
+                                <b>Reference Code :</b><span> 000</span>
+                              </div>
+                            </div>
+
+                            <div class="row pl-4 pt-2 detail-payment-plus">
+                              <div class="col">
+                                <span>Top Up</span>
+                              </div>
+
+                              <div class="col d-flex justify-content-end pr-5">
+                                <span>+Rp<span>120.000</span></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Payment List-->
+                      </div>
+                      <!-- History Payment -->
+
+                      <!-- Top Up Box -->
+                      <div class="top-up-box hide">
+                        <div
+                          class="container border-0 shadow-sm mb-4 bg-white p-3"
+                        >
+                          <div class="row pl-3 pt-3">
+                            <div class="col">
+                              <b>Select a top-up amount</b>
+                            </div>
+                          </div>
+
+                          <div class="row p-3">
+                            <div class="col">
+                              <button
+                                type="button"
+                                class="btn btn-outline-secondary mt-2"
+                                id="10000"
+                              >
+                                10000
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-secondary mt-2"
+                                id="25000"
+                              >
+                                25000
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-secondary mt-2"
+                                id="50000"
+                              >
+                                50000
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-secondary mt-2"
+                                id="75000"
+                              >
+                                75000
+                              </button>
+                              <button
+                                type="button"
+                                class="btn btn-outline-secondary mt-2"
+                                id="100000"
+                              >
+                                100000
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="row p-3">
+                            <div class="col">
+                              <p>Or enter the top-up amount here</p>
+                              <input
+                                class="pl-3 pt-2 pb-2"
+                                id="input-saldo"
+                                type="text"
+                                placeholder="Minimun Rp 10.000"
+                              />
+                            </div>
+                          </div>
+
+                          <div class="row pl-3">
+                            <div class="col">
+                              <p class="min-nominal hide">
+                                Minimum top-up amount is Rp 10.000.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Payment Method -->
+                        <div
+                          class="container border-0 shadow-sm mb-4 bg-white p-3"
+                        >
+                          <div class="row p-3">
+                            <div class="col">
+                              <b>Payment Methods</b>
+                            </div>
+                          </div>
+
+                          <div class="row p-3">
+                            <div class="col d-flex">
+                              <button
+                                class="methodPay btn mr-1 btn-warning"
+                                id="debit"
+                                type="button"
+                                data-toggle="modal"
+                                data-target="#debitModal"
+                              >
+                                Debit Card
+                              </button>
+
+                              <button
+                                class="methodPay btn mr-1 btn-warning"
+                                id="atm"
+                                type="button"
+                              >
+                                ATM
+                              </button>
+
+                              <button
+                                class="methodPay btn mr-1 btn-warning"
+                                id="mbank"
+                                type="button"
+                              >
+                                Internet/Mobile Banking
+                              </button>
+                            </div>
+                          </div>
+                          <!-- Payment Method -->
+                        </div>
+                        <!-- Payment Method -->
+                      </div>
+                      <!-- Top Up Box -->
+
+                      <!-- ATM -->
+                      <div
+                        class="atm-box container shadow-sm mb-4 p-5 bg-white hide"
+                      >
+                        <div class="method-title row mb-4">
+                          <div class="col">ATM</div>
+                        </div>
+
+                        <div class="row pb-2">
+                          <div class="col">
+                            <b>Instructions :</b>
+                          </div>
+                        </div>
+
+                        <div class="row mb-4">
+                          <div class="col">
+                            <ul>
+                              <li>Insert your ATM card and enter your PIN</li>
+                              <li>Select <b>Other Transactions</b></li>
+                              <li>Select <b>Transfer</b></li>
+                              <li>Select <b>Virtual Account</b></li>
+                              <li>
+                                Enter <b>12345</b> followed by your mobile
+                                number :
+                                <b>(e.g. 12345 08xx-xxxx-xxxx)</b>
+                              </li>
+                              <li>Enter <b>Top-up amount</b></li>
+                              <li>
+                                Follow the instructions to complete the
+                                transaction
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="row footnote">
+                          <div class="col">
+                            <span><i>Notes :</i></span>
+                          </div>
+                        </div>
+
+                        <div class="row footnote">
+                          <div class="col">
+                            <ul>
+                              <li><i>Minimum top-up amount is Rp 10.000</i></li>
+                              <li><i>Top-up fee Rp 1.000</i></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ATM -->
+
+                      <!-- Mbank -->
+                      <div
+                        class="mbank-box container shadow-sm mb-4 p-5 bg-white hide"
+                      >
+                        <div class="method-title row mb-4">
+                          <div class="col">Internet / Mobile Banking</div>
+                        </div>
+
+                        <div class="row mb-5">
+                          <div class="col">
+                            <div class="row mb-4">
+                              <div class="con">
+                                <span id="mbank-btn"
+                                  ><i class="fa fa-plus" id="icon1"></i
+                                  ><b class="pl-2">Mobile Banking</b></span
+                                >
+                                <div class="container mt-4 mbank-collapse hide">
+                                  <div class="row pb-2">
+                                    <div class="col">
+                                      <b>Instructions :</b>
+                                    </div>
+                                  </div>
+
+                                  <div class="row mb-4">
+                                    <div class="col">
+                                      <ul>
+                                        <li>
+                                          Login to your
+                                          <b>Mobile Banking</b> account
+                                        </li>
+                                        <li>Select <b>Transfer</b></li>
+                                        <li>Select <b>Virtual Account</b></li>
+                                        <li>
+                                          Enter <b>12345</b> followed by your
+                                          mobile number :
+                                          <b>(e.g. 12345 08xx-xxxx-xxxx)</b>
+                                        </li>
+                                        <li>Enter <b>Top-up amount</b></li>
+                                        <li>
+                                          Follow the instructions to complete
+                                          the transaction
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <div class="row footnote">
+                                    <div class="col">
+                                      <span><i>Notes :</i></span>
+                                    </div>
+                                  </div>
+
+                                  <div class="row footnote">
+                                    <div class="col">
+                                      <ul>
+                                        <li>
+                                          <i
+                                            >Minimum top-up amount is Rp
+                                            10.000</i
+                                          >
+                                        </li>
+                                        <li><i>Top-up fee Rp 1.000</i></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="con">
+                                <span id="internet-btn"
+                                  ><i class="fa fa-plus" id="icon2"></i
+                                  ><b class="pl-2">Internet Banking</b></span
+                                >
+                                <div
+                                  class="container mt-4 internet-collapse hide"
+                                >
+                                  <div class="row pb-2">
+                                    <div class="col">
+                                      <b>Instructions :</b>
+                                    </div>
+                                  </div>
+
+                                  <div class="row mb-4">
+                                    <div class="col">
+                                      <ul>
+                                        <li>
+                                          Login to your
+                                          <b>Internet Banking</b> account
+                                        </li>
+                                        <li>Select <b>Transfer</b></li>
+                                        <li>Select <b>Virtual Account</b></li>
+                                        <li>
+                                          Enter <b>12345</b> followed by your
+                                          mobile number :
+                                          <b>(e.g. 12345 08xx-xxxx-xxxx)</b>
+                                        </li>
+                                        <li>Enter <b>Top-up amount</b></li>
+                                        <li>
+                                          Follow the instructions to complete
+                                          the transaction
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+
+                                  <div class="row footnote">
+                                    <div class="col">
+                                      <span><i>Notes :</i></span>
+                                    </div>
+                                  </div>
+
+                                  <div class="row footnote">
+                                    <div class="col">
+                                      <ul>
+                                        <li>
+                                          <i
+                                            >Minimum top-up amount is Rp
+                                            10.000</i
+                                          >
+                                        </li>
+                                        <li><i>Top-up fee Rp 1.000</i></li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Mbank -->
+                    </div>
+
+                    <!-- Pay Modal -->
+                    <div
+                      class="modal fade"
+                      id="payModal"
+                      tabindex="-1"
+                      aria-labelledby="payModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-body text-center">
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            <i class="fa fa-check-circle"></i>
+                            <p><b>Your Payment Was Successful!</b></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Pay Modal -->
+
+                    <!-- Pay Debit Modal -->
+                    <div
+                      class="modal fade"
+                      id="payDebitModal"
+                      tabindex="-1"
+                      aria-labelledby="payDebitModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                          <div class="modal-body text-center">
+                            <button
+                              type="button"
+                              class="close"
+                              data-dismiss="modal"
+                              aria-label="Close"
+                            >
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                            <i class="fa fa-check-circle"></i>
+                            <p><b>Transaction Completed Successful!</b></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Pay Debit Modal -->
+
+                    <!-- Debit Modal -->
+                    <div
+                      class="modal fade"
+                      id="debitModal"
+                      tabindex="-1"
+                      aria-labelledby="debitModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content modal-debit">
+                          <div class="modal-body">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col">
+                                  <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close"
+                                  >
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-md title">
+                                  <b>Debit Card</b>
+                                  <hr />
+                                </div>
+                              </div>
+
+                              <div class="row pb-3">
+                                <div class="col-md">
+                                  <label for="nameCard"
+                                    ><b>Name on Card</b></label
+                                  ><br />
+                                  <input
+                                    class="long-input"
+                                    type="text"
+                                    name="nameCard"
+                                    autocomplete="off"
+                                    required
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="row pb-3">
+                                <div class="col-md">
+                                  <label for="cardNumber"
+                                    ><b>Card Number</b></label
+                                  ><br />
+                                  <input
+                                    class="long-input"
+                                    type="text"
+                                    name="cardNumber"
+                                    autocomplete="off"
+                                    required
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-4">
+                                  <label for="cvc"><b>CVC</b></label>
+                                </div>
+
+                                <div class="col">
+                                  <label for="masa"><b>Expiry Date</b></label>
+                                </div>
+                              </div>
+
+                              <div class="row pb-3">
+                                <div class="col">
+                                  <input
+                                    class="short-input"
+                                    type="text"
+                                    name="cvc"
+                                    placeholder="ex. 311"
+                                    autocomplete="off"
+                                    size="3"
+                                    required
+                                  />
+                                </div>
+
+                                <div class="col">
+                                  <input
+                                    class="short-input"
+                                    type="text"
+                                    name="masa"
+                                    placeholder="MM"
+                                    autocomplete="off"
+                                    size="5"
+                                    required
+                                  />
+                                </div>
+
+                                <div class="col d-flex justify-content-start">
+                                  <input
+                                    class="short-input"
+                                    type="text"
+                                    name="masa"
+                                    placeholder="YY"
+                                    autocomplete="off"
+                                    size="5"
+                                    required
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div
+                                  class="total col d-flex align-items-center pl-3 pt-3 pb-3"
+                                >
+                                  Total :<span class="pl-3" id="total-debit"
+                                    >0</span
+                                  >
+                                </div>
+
+                                <div
+                                  class="col d-flex align-items-center justify-content-end"
+                                >
+                                  <button
+                                    class="btn btn-success"
+                                    type="button"
+                                    data-toggle="modal"
+                                    data-target="#payDebitModal"
+                                    data-dismiss="modal"
+                                    id="debit-pay-btn"
+                                  >
+                                    Pay
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Debit Modal -->
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            2020 <i class="fa fa-copyright"></i> Faraday E-Library. All Right
+            Reserved - Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
       </div>
     </div>
-    <!-- Debit Modal -->
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- jQuery -->
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- DateJS -->
+    <script src="vendors/DateJS/build/date.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="assets/js/custom.min.js"></script>
     <script src="assets/js/payment.js"></script>
-
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-
   </body>
 </html>
