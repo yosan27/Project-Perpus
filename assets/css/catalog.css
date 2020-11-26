@@ -12,14 +12,6 @@ body {
   width: 40px;
 }
 
-.history {
-  margin-top: 10%;
-}
-
-.history h3{
-  display: inline;
-}
-
 .history button {
   float: right;
 }
