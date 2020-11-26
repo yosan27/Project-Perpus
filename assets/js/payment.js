@@ -38,7 +38,7 @@ const debitPayBtn = document.getElementById('debit-pay-btn');
 
 // saldo
 const saldo = document.querySelector('.header-logo-bar .saldo');
-saldo.innerHTML = 100000;
+saldo.innerHTML = 15000;
 
 // list denda
 const telat = 2000;
@@ -161,7 +161,7 @@ payBtn.addEventListener('click', function(){
     listBox.classList.toggle('hide');
     noBill.classList.toggle('hide');
   }else{
-    pPayModal.innerHTML = "Pembayaran Gagal!";
+    pPayModal.innerHTML = "Your Payment Failed!";
     iconPayModal.className = "fa fa-ban";
     iconPayModal.style.color = 'red';
   }
